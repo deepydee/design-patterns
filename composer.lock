@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b52b7c4e0ea4952761469181e9bf59b",
+    "content-hash": "f809fd374cf12e2ed516f372121b3ee7",
     "packages": [
         {
             "name": "brick/math",
@@ -2661,6 +2661,38 @@
                 }
             ],
             "time": "2023-10-17T14:13:20+00:00"
+        },
+        {
+            "name": "modules/abstract-factory",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/abstract-factory",
+                "reference": "33bb5d73e1cae3d63266110156bfc398474eccbd"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\AbstractFactory\\Providers\\AbstractFactoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\AbstractFactory\\": "src/",
+                    "Modules\\AbstractFactory\\Tests\\": "tests/",
+                    "Modules\\AbstractFactory\\Database\\Factories\\": "database/factories/",
+                    "Modules\\AbstractFactory\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "modules/dialog",
