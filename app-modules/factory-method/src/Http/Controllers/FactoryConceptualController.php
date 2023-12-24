@@ -8,6 +8,12 @@ use Modules\FactoryMethod\Conceptual\ConcreteCreator1;
 use Modules\FactoryMethod\Conceptual\ConcreteCreator2;
 use Modules\FactoryMethod\Conceptual\Creator;
 
+/**
+ * Паттерн Фабричный Метод
+ *
+ * Назначение: Определяет общий интерфейс для создания объектов в суперклассе,
+ * позволяя подклассам изменять тип создаваемых объектов.
+ */
 class FactoryConceptualController extends Controller
 {
     /**
