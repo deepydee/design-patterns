@@ -17,7 +17,8 @@
         "modules/abstract-factory": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
-        "modules/logistics": "*"
+        "modules/logistics": "*",
+        "twig/twig": "^3.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
