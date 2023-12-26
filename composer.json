@@ -15,6 +15,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "modules/abstract-factory": "*",
+        "modules/builder": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*"
