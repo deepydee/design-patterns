@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aeb58eec21e8fcbb3d23fd87402bb159",
+    "content-hash": "9178e6aa9407f2e557f97a0b75f2ba96",
     "packages": [
         {
             "name": "brick/math",
@@ -2812,6 +2812,38 @@
                     "Modules\\Logistics\\Tests\\": "tests/",
                     "Modules\\Logistics\\Database\\Factories\\": "database/factories/",
                     "Modules\\Logistics\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/singleton",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/singleton",
+                "reference": "394323baa1924b024ab30c461f2a39479f0528a4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Singleton\\Providers\\SingletonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Singleton\\": "src/",
+                    "Modules\\Singleton\\Tests\\": "tests/",
+                    "Modules\\Singleton\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Singleton\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
