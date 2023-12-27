@@ -1,5 +1,5 @@
 <?php
 
-// use Modules\Singleton\Http\Controllers\SingletonController;
+use Modules\Singleton\Http\Controllers\SingletonConceptualController;
 
-// Route::get('/singletons', [SingletonController::class, 'index'])->name('singletons.index');
+Route::get('/singleton/conceptual', SingletonConceptualController::class);
