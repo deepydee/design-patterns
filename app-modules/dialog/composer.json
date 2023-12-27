@@ -1,0 +1,24 @@
+{
+	"name": "modules/dialog",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Dialog\\": "src/",
+			"Modules\\Dialog\\Tests\\": "tests/",
+			"Modules\\Dialog\\Database\\Factories\\": "database/factories/",
+			"Modules\\Dialog\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Dialog\\Providers\\DialogServiceProvider"
+			]
+		}
+	}
+}

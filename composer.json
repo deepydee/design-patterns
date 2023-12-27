@@ -2,14 +2,24 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
+        "internachi/modular": "^2.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "modules/abstract-factory": "*",
+        "modules/builder": "*",
+        "modules/dialog": "*",
+        "modules/factory-method": "*",
+        "modules/logistics": "*",
+        "twig/twig": "^3.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -62,5 +72,14 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "app-modules/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

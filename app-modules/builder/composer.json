@@ -1,0 +1,24 @@
+{
+	"name": "modules/builder",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Builder\\": "src/",
+			"Modules\\Builder\\Tests\\": "tests/",
+			"Modules\\Builder\\Database\\Factories\\": "database/factories/",
+			"Modules\\Builder\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Builder\\Providers\\BuilderServiceProvider"
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "modules/factory-method",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\FactoryMethod\\": "src/",
+			"Modules\\FactoryMethod\\Tests\\": "tests/",
+			"Modules\\FactoryMethod\\Database\\Factories\\": "database/factories/",
+			"Modules\\FactoryMethod\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\FactoryMethod\\Providers\\FactoryMethodServiceProvider"
+			]
+		}
+	}
+}
