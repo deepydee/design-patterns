@@ -20,6 +20,7 @@
         "modules/factory-method": "*",
         "modules/logistics": "*",
         "modules/singleton": "*",
+        "modules/prototype": "*",
         "twig/twig": "^3.8"
     },
     "require-dev": {

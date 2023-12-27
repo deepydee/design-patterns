@@ -1,0 +1,24 @@
+{
+	"name": "modules/prototype",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Prototype\\": "src/",
+			"Modules\\Prototype\\Tests\\": "tests/",
+			"Modules\\Prototype\\Database\\Factories\\": "database/factories/",
+			"Modules\\Prototype\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Prototype\\Providers\\PrototypeServiceProvider"
+			]
+		}
+	}
+}
