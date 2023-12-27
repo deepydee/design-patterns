@@ -1,4 +1,6 @@
 <?php
 
-// Route::get('/prototypes', [PrototypeController::class, 'index'])->name('prototypes.index');
+use Modules\Prototype\Http\Controllers\PrototypeConceptualController;
+
+Route::get('/prototype/conceptual', PrototypeConceptualController::class);
 
