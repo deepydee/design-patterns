@@ -19,6 +19,7 @@
         "modules/dialog": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*",
+        "modules/prototype": "*",
         "twig/twig": "^3.8"
     },
     "require-dev": {
