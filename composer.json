@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.8",
         "modules/abstract-factory": "*",
         "modules/adapter": "*",
+        "modules/bridge": "*",
         "modules/builder": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
