@@ -1,0 +1,24 @@
+{
+	"name": "modules/bridge",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Bridge\\": "src/",
+			"Modules\\Bridge\\Tests\\": "tests/",
+			"Modules\\Bridge\\Database\\Factories\\": "database/factories/",
+			"Modules\\Bridge\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Bridge\\Providers\\BridgeServiceProvider"
+			]
+		}
+	}
+}

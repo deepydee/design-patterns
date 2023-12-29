@@ -15,12 +15,13 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "modules/abstract-factory": "*",
+        "modules/bridge": "*",
         "modules/builder": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*",
-        "modules/singleton": "*",
         "modules/prototype": "*",
+        "modules/singleton": "*",
         "twig/twig": "^3.8"
     },
     "require-dev": {
