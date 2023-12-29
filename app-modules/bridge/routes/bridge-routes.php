@@ -1,4 +1,6 @@
 <?php
 
-// Route::get('/bridges', [BridgeController::class, 'index'])->name('bridges.index');
+use Modules\Bridge\Http\Controllers\BridgeConceptualController;
+
+Route::get('/bridge/conceptual', BridgeConceptualController::class);
 
