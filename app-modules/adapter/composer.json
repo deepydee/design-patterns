@@ -1,0 +1,24 @@
+{
+	"name": "modules/adapter",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Adapter\\": "src/",
+			"Modules\\Adapter\\Tests\\": "tests/",
+			"Modules\\Adapter\\Database\\Factories\\": "database/factories/",
+			"Modules\\Adapter\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Adapter\\Providers\\AdapterServiceProvider"
+			]
+		}
+	}
+}
