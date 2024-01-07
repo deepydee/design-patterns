@@ -19,6 +19,7 @@
         "modules/bridge": "*",
         "modules/builder": "*",
         "modules/composite": "*",
+        "modules/decorator": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*",
