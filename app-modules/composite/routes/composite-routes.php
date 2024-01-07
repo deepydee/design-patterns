@@ -1,5 +1,5 @@
 <?php
 
-// use Modules\Composite\Http\Controllers\CompositeController;
+use Modules\Composite\Http\Controllers\CompositeConceptualController;
 
-// Route::get('/composites', [CompositeController::class, 'index'])->name('composites.index');
+Route::get('/composite/conceptual', CompositeConceptualController::class);
