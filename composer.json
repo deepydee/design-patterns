@@ -18,6 +18,7 @@
         "modules/adapter": "*",
         "modules/bridge": "*",
         "modules/builder": "*",
+        "modules/composite": "*",
         "modules/dialog": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*",
