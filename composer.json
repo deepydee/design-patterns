@@ -21,6 +21,7 @@
         "modules/composite": "*",
         "modules/decorator": "*",
         "modules/dialog": "*",
+        "modules/facade": "*",
         "modules/factory-method": "*",
         "modules/logistics": "*",
         "modules/prototype": "*",
