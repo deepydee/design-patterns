@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5df9e6852b24d4dd0ddfbb078885320e",
+    "content-hash": "95500095e67877f452bc35c10adaccb6",
     "packages": [
         {
             "name": "brick/math",
@@ -2943,6 +2943,38 @@
                     "Modules\\FactoryMethod\\Tests\\": "tests/",
                     "Modules\\FactoryMethod\\Database\\Factories\\": "database/factories/",
                     "Modules\\FactoryMethod\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/flyweight",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/flyweight",
+                "reference": "efeddd39c2585e8ed3a39060f382037b917e9f37"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Flyweight\\Providers\\FlyweightServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Flyweight\\": "src/",
+                    "Modules\\Flyweight\\Tests\\": "tests/",
+                    "Modules\\Flyweight\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Flyweight\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [

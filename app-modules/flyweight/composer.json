@@ -1,0 +1,24 @@
+{
+	"name": "modules/flyweight",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Flyweight\\": "src/",
+			"Modules\\Flyweight\\Tests\\": "tests/",
+			"Modules\\Flyweight\\Database\\Factories\\": "database/factories/",
+			"Modules\\Flyweight\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Flyweight\\Providers\\FlyweightServiceProvider"
+			]
+		}
+	}
+}

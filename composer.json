@@ -23,6 +23,7 @@
         "modules/dialog": "*",
         "modules/facade": "*",
         "modules/factory-method": "*",
+        "modules/flyweight": "*",
         "modules/logistics": "*",
         "modules/prototype": "*",
         "modules/singleton": "*",
