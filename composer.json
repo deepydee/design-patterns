@@ -26,6 +26,7 @@
         "modules/flyweight": "*",
         "modules/logistics": "*",
         "modules/prototype": "*",
+        "modules/proxy": "*",
         "modules/singleton": "*",
         "twig/twig": "^3.8"
     },

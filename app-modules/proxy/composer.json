@@ -1,0 +1,24 @@
+{
+	"name": "modules/proxy",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Proxy\\": "src/",
+			"Modules\\Proxy\\Tests\\": "tests/",
+			"Modules\\Proxy\\Database\\Factories\\": "database/factories/",
+			"Modules\\Proxy\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Proxy\\Providers\\ProxyServiceProvider"
+			]
+		}
+	}
+}
