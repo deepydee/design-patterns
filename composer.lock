@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c7660c953a818251079248e219a457f",
+    "content-hash": "e066105e9a6819e2518bf4c34c6b4c45",
     "packages": [
         {
             "name": "brick/math",
@@ -3039,6 +3039,38 @@
                     "Modules\\Prototype\\Tests\\": "tests/",
                     "Modules\\Prototype\\Database\\Factories\\": "database/factories/",
                     "Modules\\Prototype\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/proxy",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/proxy",
+                "reference": "42c8ca3ce36e63de171362e4220a0832916ea935"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Proxy\\Providers\\ProxyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Proxy\\": "src/",
+                    "Modules\\Proxy\\Tests\\": "tests/",
+                    "Modules\\Proxy\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Proxy\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
