@@ -28,6 +28,7 @@
         "modules/prototype": "*",
         "modules/proxy": "*",
         "modules/singleton": "*",
+        "modules/strategy": "*",
         "twig/twig": "^3.8"
     },
     "require-dev": {
