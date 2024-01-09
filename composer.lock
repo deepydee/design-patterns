@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "058293eecc7777180d3d2e2ee8f86b74",
+    "content-hash": "a141daf7705be4336fac21577c3263e0",
     "packages": [
         {
             "name": "brick/math",
@@ -2911,6 +2911,38 @@
                     "Modules\\Dialog\\Tests\\": "tests/",
                     "Modules\\Dialog\\Database\\Factories\\": "database/factories/",
                     "Modules\\Dialog\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/event-channel",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/event-channel",
+                "reference": "0352feee0a860d6777108327313564906dc3c2b8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\EventChannel\\Providers\\EventChannelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\EventChannel\\": "src/",
+                    "Modules\\EventChannel\\Tests\\": "tests/",
+                    "Modules\\EventChannel\\Database\\Factories\\": "database/factories/",
+                    "Modules\\EventChannel\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [

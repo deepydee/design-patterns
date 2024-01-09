@@ -22,6 +22,7 @@
         "modules/decorator": "*",
         "modules/delegation": "*",
         "modules/dialog": "*",
+        "modules/event-channel": "*",
         "modules/facade": "*",
         "modules/factory-method": "*",
         "modules/flyweight": "*",
