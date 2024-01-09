@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a783faa30d955e3a2af39de66c6a25bc",
+    "content-hash": "058293eecc7777180d3d2e2ee8f86b74",
     "packages": [
         {
             "name": "brick/math",
@@ -2847,6 +2847,38 @@
                     "Modules\\Decorator\\Tests\\": "tests/",
                     "Modules\\Decorator\\Database\\Factories\\": "database/factories/",
                     "Modules\\Decorator\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/delegation",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/delegation",
+                "reference": "a527aee23b57d2cfe08116be01fb9567879b229f"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Delegation\\Providers\\DelegationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Delegation\\": "src/",
+                    "Modules\\Delegation\\Tests\\": "tests/",
+                    "Modules\\Delegation\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Delegation\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
