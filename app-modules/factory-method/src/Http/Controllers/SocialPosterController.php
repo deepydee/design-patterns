@@ -3,10 +3,22 @@
 namespace Modules\FactoryMethod\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\FactoryMethod\RealWorld\Posters\FacebookPoster;
 use Modules\FactoryMethod\RealWorld\Posters\LinkedInPoster;
 use Modules\FactoryMethod\RealWorld\SocialNetworkPoster;
+
+/**
+ * Паттерн Фабричный Метод
+ *
+ * Назначение: Определяет общий интерфейс для создания объектов в суперклассе,
+ * позволяя подклассам изменять тип создаваемых объектов.
+ *
+ * Пример: В этом примере паттерн Фабричный Метод предоставляет интерфейс для
+ * создания коннекторов к социальным сетям, которые могут быть использованы для
+ * входа в сеть, создания сообщений и, возможно, выполнения других действий, – и
+ * всё это без привязки клиентского кода к определённым классам конкретной
+ * социальной сети.
+ */
 
 class SocialPosterController extends Controller
 {
@@ -17,11 +29,11 @@ class SocialPosterController extends Controller
      */
     public function index(): void
     {
-        echo "Testing ConcreteCreator1:\n";
+        echo "Testing ConcreteCreator1:<br>";
         $this->clientCode(new FacebookPoster("john_smith", "******"));
-        echo "\n\n";
+        echo "<br><br>";
 
-        echo "Testing ConcreteCreator2:\n";
+        echo "Testing ConcreteCreator2:<br>";
         $this->clientCode(new LinkedInPoster("john_smith@example.com", "******"));
     }
 
