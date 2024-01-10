@@ -1,0 +1,24 @@
+{
+	"name": "modules/static-factory",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\StaticFactory\\": "src/",
+			"Modules\\StaticFactory\\Tests\\": "tests/",
+			"Modules\\StaticFactory\\Database\\Factories\\": "database/factories/",
+			"Modules\\StaticFactory\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\StaticFactory\\Providers\\StaticFactoryServiceProvider"
+			]
+		}
+	}
+}

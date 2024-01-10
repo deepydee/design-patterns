@@ -30,6 +30,7 @@
         "modules/prototype": "*",
         "modules/proxy": "*",
         "modules/singleton": "*",
+        "modules/static-factory": "*",
         "modules/strategy": "*",
         "twig/twig": "^3.8"
     },
