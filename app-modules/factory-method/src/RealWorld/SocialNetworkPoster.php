@@ -30,7 +30,7 @@ abstract class SocialNetworkPoster
      * подклассы могут изменять логику косвенно, возвращая из фабричного метода
      * различные типы коннекторов.
      */
-    public function post($content): void
+    public function post(string $content): void
     {
         // Вызываем фабричный метод для создания объекта Продукта...
         $network = $this->getSocialNetwork();
