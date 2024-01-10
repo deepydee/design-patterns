@@ -1,0 +1,24 @@
+{
+	"name": "modules/delegation",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Delegation\\": "src/",
+			"Modules\\Delegation\\Tests\\": "tests/",
+			"Modules\\Delegation\\Database\\Factories\\": "database/factories/",
+			"Modules\\Delegation\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Delegation\\Providers\\DelegationServiceProvider"
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "modules/strategy",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Strategy\\": "src/",
+			"Modules\\Strategy\\Tests\\": "tests/",
+			"Modules\\Strategy\\Database\\Factories\\": "database/factories/",
+			"Modules\\Strategy\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Strategy\\Providers\\StrategyServiceProvider"
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "modules/singleton",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Singleton\\": "src/",
+			"Modules\\Singleton\\Tests\\": "tests/",
+			"Modules\\Singleton\\Database\\Factories\\": "database/factories/",
+			"Modules\\Singleton\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Singleton\\Providers\\SingletonServiceProvider"
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "modules/event-channel",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\EventChannel\\": "src/",
+			"Modules\\EventChannel\\Tests\\": "tests/",
+			"Modules\\EventChannel\\Database\\Factories\\": "database/factories/",
+			"Modules\\EventChannel\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\EventChannel\\Providers\\EventChannelServiceProvider"
+			]
+		}
+	}
+}

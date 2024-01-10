@@ -1,11 +1,11 @@
 <?php
 
-// use Modules\AbstractFactory\Http\Controllers\AbstractFactoryController;
+declare(strict_types=1);
 
-// Route::get('/abstract-factories', [AbstractFactoryController::class, 'index'])->name('abstract-factories.index');
-// Route::get('/abstract-factories/create', [AbstractFactoryController::class, 'create'])->name('abstract-factories.create');
-// Route::post('/abstract-factories', [AbstractFactoryController::class, 'store'])->name('abstract-factories.store');
-// Route::get('/abstract-factories/{abstract-factory}', [AbstractFactoryController::class, 'show'])->name('abstract-factories.show');
-// Route::get('/abstract-factories/{abstract-factory}/edit', [AbstractFactoryController::class, 'edit'])->name('abstract-factories.edit');
-// Route::put('/abstract-factories/{abstract-factory}', [AbstractFactoryController::class, 'update'])->name('abstract-factories.update');
-// Route::delete('/abstract-factories/{abstract-factory}', [AbstractFactoryController::class, 'destroy'])->name('abstract-factories.destroy');
+use Modules\AbstractFactory\Http\Controllers\AbstractFactoryConceptualController;
+use Modules\AbstractFactory\Http\Controllers\AbstractFactoryRealWorldController;
+use Modules\AbstractFactory\Http\Controllers\GuiFactoryController;
+
+Route::get('/abstract-factory/conceptual', AbstractFactoryConceptualController::class);
+Route::get('/abstract-factory/real-world', AbstractFactoryRealWorldController::class);
+Route::get('/abstract-factory/gui', GuiFactoryController::class);
