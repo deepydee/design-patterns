@@ -27,4 +27,16 @@ class SlackNotification implements Notification
         $this->slack->logIn();
         $this->slack->sendMessage($this->chatId, $slackMessage);
     }
+
+    /**
+     * Можно вызывать другие полезные методы новой библиотеки
+     */
+    public function __call(string $name, array $arguments)
+    {
+        if (method_exists($this->slack, $name)) {
+            return call_user_func_array([$this->slack, $name], $arguments);
+        }
+
+        throw new \Exception('Call to undefined method SlackApi::' . $name . '()');
+    }
 }
