@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b8648051e3c38145f33964e2a5d8fbc",
+    "content-hash": "36662752682e60704e581f1a19c2354f",
     "packages": [
         {
             "name": "brick/math",
@@ -2911,6 +2911,38 @@
                     "Modules\\Dialog\\Tests\\": "tests/",
                     "Modules\\Dialog\\Database\\Factories\\": "database/factories/",
                     "Modules\\Dialog\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/dto",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/dto",
+                "reference": "ea1be84e0c4b3a00d68e57ed7a906f2458c920f6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Dto\\Providers\\DtoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Dto\\": "src/",
+                    "Modules\\Dto\\Tests\\": "tests/",
+                    "Modules\\Dto\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Dto\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
