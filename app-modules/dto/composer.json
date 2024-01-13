@@ -1,0 +1,24 @@
+{
+	"name": "modules/dto",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Dto\\": "src/",
+			"Modules\\Dto\\Tests\\": "tests/",
+			"Modules\\Dto\\Database\\Factories\\": "database/factories/",
+			"Modules\\Dto\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Dto\\Providers\\DtoServiceProvider"
+			]
+		}
+	}
+}
