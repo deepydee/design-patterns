@@ -18,6 +18,7 @@
         "modules/adapter": "*",
         "modules/bridge": "*",
         "modules/builder": "*",
+        "modules/command": "*",
         "modules/composite": "*",
         "modules/decorator": "*",
         "modules/delegation": "*",

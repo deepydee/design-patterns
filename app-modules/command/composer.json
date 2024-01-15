@@ -1,0 +1,24 @@
+{
+	"name": "modules/command",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Command\\": "src/",
+			"Modules\\Command\\Tests\\": "tests/",
+			"Modules\\Command\\Database\\Factories\\": "database/factories/",
+			"Modules\\Command\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Command\\Providers\\CommandServiceProvider"
+			]
+		}
+	}
+}
