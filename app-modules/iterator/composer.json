@@ -1,0 +1,24 @@
+{
+	"name": "modules/iterator",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Iterator\\": "src/",
+			"Modules\\Iterator\\Tests\\": "tests/",
+			"Modules\\Iterator\\Database\\Factories\\": "database/factories/",
+			"Modules\\Iterator\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Iterator\\Providers\\IteratorServiceProvider"
+			]
+		}
+	}
+}
