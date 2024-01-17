@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab0dab887b218bdb1d52bf89f56252e7",
+    "content-hash": "0bbf7152aa300147308f60139a852087",
     "packages": [
         {
             "name": "brick/math",
@@ -3167,6 +3167,38 @@
                     "Modules\\Logistics\\Tests\\": "tests/",
                     "Modules\\Logistics\\Database\\Factories\\": "database/factories/",
                     "Modules\\Logistics\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/observer",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/observer",
+                "reference": "ff7200d15a96c7648bc0d5e877b0662a8b82212c"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Observer\\Providers\\ObserverServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Observer\\": "src/",
+                    "Modules\\Observer\\Tests\\": "tests/",
+                    "Modules\\Observer\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Observer\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
