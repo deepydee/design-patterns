@@ -28,6 +28,7 @@
         "modules/facade": "*",
         "modules/factory-method": "*",
         "modules/flyweight": "*",
+        "modules/iterator": "*",
         "modules/logistics": "*",
         "modules/prototype": "*",
         "modules/proxy": "*",
