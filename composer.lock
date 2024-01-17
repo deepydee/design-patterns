@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36662752682e60704e581f1a19c2354f",
+    "content-hash": "af4034a7d08d6899a764c3714e04004d",
     "packages": [
         {
             "name": "brick/math",
@@ -2783,6 +2783,38 @@
                     "Modules\\Builder\\Tests\\": "tests/",
                     "Modules\\Builder\\Database\\Factories\\": "database/factories/",
                     "Modules\\Builder\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/command",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/command",
+                "reference": "249c0ab544e787c58cd3aa1261b1a3aa91116c1d"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Command\\Providers\\CommandServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Command\\": "src/",
+                    "Modules\\Command\\Tests\\": "tests/",
+                    "Modules\\Command\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Command\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -10070,5 +10102,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.6.0"
 }
