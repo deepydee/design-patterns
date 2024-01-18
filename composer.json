@@ -36,6 +36,7 @@
         "modules/singleton": "*",
         "modules/static-factory": "*",
         "modules/strategy": "*",
+        "modules/template-method": "*",
         "modules/visitor": "*",
         "twig/twig": "^3.8"
     },
