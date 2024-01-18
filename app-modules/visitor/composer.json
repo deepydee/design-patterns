@@ -1,0 +1,24 @@
+{
+	"name": "modules/visitor",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Visitor\\": "src/",
+			"Modules\\Visitor\\Tests\\": "tests/",
+			"Modules\\Visitor\\Database\\Factories\\": "database/factories/",
+			"Modules\\Visitor\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Visitor\\Providers\\VisitorServiceProvider"
+			]
+		}
+	}
+}
