@@ -1,0 +1,24 @@
+{
+	"name": "modules/template-method",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\TemplateMethod\\": "src/",
+			"Modules\\TemplateMethod\\Tests\\": "tests/",
+			"Modules\\TemplateMethod\\Database\\Factories\\": "database/factories/",
+			"Modules\\TemplateMethod\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\TemplateMethod\\Providers\\TemplateMethodServiceProvider"
+			]
+		}
+	}
+}

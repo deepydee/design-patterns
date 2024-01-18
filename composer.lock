@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56d92cdcc8c5a1157c260b0b530e6a40",
+    "content-hash": "e6446de0a544fa9bf37ea34da8144a92",
     "packages": [
         {
             "name": "brick/math",
@@ -3359,6 +3359,38 @@
                     "Modules\\Strategy\\Tests\\": "tests/",
                     "Modules\\Strategy\\Database\\Factories\\": "database/factories/",
                     "Modules\\Strategy\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/template-method",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/template-method",
+                "reference": "d885862510c28a1e72f5ca82ea82aba393c84481"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\TemplateMethod\\Providers\\TemplateMethodServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\TemplateMethod\\": "src/",
+                    "Modules\\TemplateMethod\\Tests\\": "tests/",
+                    "Modules\\TemplateMethod\\Database\\Factories\\": "database/factories/",
+                    "Modules\\TemplateMethod\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
