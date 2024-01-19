@@ -1,0 +1,24 @@
+{
+	"name": "modules/mediator",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\Mediator\\": "src/",
+			"Modules\\Mediator\\Tests\\": "tests/",
+			"Modules\\Mediator\\Database\\Factories\\": "database/factories/",
+			"Modules\\Mediator\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\Mediator\\Providers\\MediatorServiceProvider"
+			]
+		}
+	}
+}

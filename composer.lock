@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4d113d416133448f1f46d7dedd36054",
+    "content-hash": "563bff2757b2fd659e8f078486954fae",
     "packages": [
         {
             "name": "brick/math",
@@ -3167,6 +3167,38 @@
                     "Modules\\Logistics\\Tests\\": "tests/",
                     "Modules\\Logistics\\Database\\Factories\\": "database/factories/",
                     "Modules\\Logistics\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/mediator",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/mediator",
+                "reference": "384f4c41342218dce512c665023c91a4c589d89a"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Mediator\\Providers\\MediatorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Mediator\\": "src/",
+                    "Modules\\Mediator\\Tests\\": "tests/",
+                    "Modules\\Mediator\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Mediator\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
