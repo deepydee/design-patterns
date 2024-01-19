@@ -34,6 +34,7 @@
         "modules/prototype": "*",
         "modules/proxy": "*",
         "modules/singleton": "*",
+        "modules/state": "*",
         "modules/static-factory": "*",
         "modules/strategy": "*",
         "modules/template-method": "*",

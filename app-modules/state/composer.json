@@ -1,0 +1,24 @@
+{
+	"name": "modules/state",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\State\\": "src/",
+			"Modules\\State\\Tests\\": "tests/",
+			"Modules\\State\\Database\\Factories\\": "database/factories/",
+			"Modules\\State\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\State\\Providers\\StateServiceProvider"
+			]
+		}
+	}
+}
