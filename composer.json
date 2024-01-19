@@ -30,6 +30,7 @@
         "modules/flyweight": "*",
         "modules/iterator": "*",
         "modules/logistics": "*",
+        "modules/mediator": "*",
         "modules/observer": "*",
         "modules/prototype": "*",
         "modules/proxy": "*",
