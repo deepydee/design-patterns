@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "563bff2757b2fd659e8f078486954fae",
+    "content-hash": "a4fe3a9151a662736952eb4df8c4fbf7",
     "packages": [
         {
             "name": "brick/math",
@@ -2783,6 +2783,38 @@
                     "Modules\\Builder\\Tests\\": "tests/",
                     "Modules\\Builder\\Database\\Factories\\": "database/factories/",
                     "Modules\\Builder\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/chain_of_responsibilities",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/chain_of_responsibilities",
+                "reference": "069ecceb2d45dce89eac3e74f54759173462ff3b"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\ChainOfResponsibilities\\Providers\\ChainOfResponsibilitiesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\ChainOfResponsibilities\\": "src/",
+                    "Modules\\ChainOfResponsibilities\\Tests\\": "tests/",
+                    "Modules\\ChainOfResponsibilities\\Database\\Factories\\": "database/factories/",
+                    "Modules\\ChainOfResponsibilities\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
