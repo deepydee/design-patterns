@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4fe3a9151a662736952eb4df8c4fbf7",
+    "content-hash": "c53029a4fe0a3c763a3b90580a05391b",
     "packages": [
         {
             "name": "brick/math",
@@ -3135,6 +3135,38 @@
                     "Modules\\Flyweight\\Tests\\": "tests/",
                     "Modules\\Flyweight\\Database\\Factories\\": "database/factories/",
                     "Modules\\Flyweight\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/head-first-patterns",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/head-first-patterns",
+                "reference": "9bf956270f8e71034e4df091d003f268f4f1feae"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\HeadFirstPatterns\\Providers\\HeadFirstPatternsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\HeadFirstPatterns\\": "src/",
+                    "Modules\\HeadFirstPatterns\\Tests\\": "tests/",
+                    "Modules\\HeadFirstPatterns\\Database\\Factories\\": "database/factories/",
+                    "Modules\\HeadFirstPatterns\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [

@@ -1,0 +1,24 @@
+{
+	"name": "modules/head-first-patterns",
+	"description": "",
+	"type": "library",
+	"version": "1.0",
+	"license": "proprietary",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Modules\\HeadFirstPatterns\\": "src/",
+			"Modules\\HeadFirstPatterns\\Tests\\": "tests/",
+			"Modules\\HeadFirstPatterns\\Database\\Factories\\": "database/factories/",
+			"Modules\\HeadFirstPatterns\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Modules\\HeadFirstPatterns\\Providers\\HeadFirstPatternsServiceProvider"
+			]
+		}
+	}
+}
