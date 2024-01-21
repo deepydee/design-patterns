@@ -28,10 +28,10 @@ final class CurrentConditionsDisplay implements Observer, DisplayElement
      * При вызове update() мы сохраняем значения температуры и влажности,
      * после чего вызываем display()
      */
-    public function update(float $temp, float $humidity, float $pressure): void
+    public function update(): void
     {
-        $this->temperature = $temp;
-        $this->humidity = $humidity;
+        $this->temperature = $this->weatherData->getTemperature();
+        $this->humidity = $this->weatherData->getHumidity();
         $this->display();
     }
 

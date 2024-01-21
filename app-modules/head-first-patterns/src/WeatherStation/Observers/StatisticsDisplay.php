@@ -30,8 +30,10 @@ final class StatisticsDisplay implements Observer, DisplayElement
      * При вызове update() мы сохраняем значения температуры и влажности,
      * после чего вызываем display()
      */
-    public function update(float $temp, float $humidity, float $pressure): void
+    public function update(): void
     {
+        $temp = $this->weatherData->getTemperature();
+
         $this->tempSum += $temp;
         $this->numReadings++;
 

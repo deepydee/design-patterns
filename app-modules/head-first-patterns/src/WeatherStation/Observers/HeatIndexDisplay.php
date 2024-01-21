@@ -28,8 +28,10 @@ final class HeatIndexDisplay implements Observer, DisplayElement
      * При вызове update() мы сохраняем значения температуры и влажности,
      * после чего вызываем display()
      */
-    public function update(float $temp, float $humidity, float $pressure): void
+    public function update(): void
     {
+        $temp = $this->weatherData->getTemperature();
+        $humidity = $this->weatherData->getHumidity();
         $this->heatIndex = $this->computeHeatIndex($temp, $humidity);
         $this->display();
     }

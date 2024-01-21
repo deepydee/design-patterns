@@ -7,6 +7,14 @@ namespace Modules\HeadFirstPatterns\WeatherStation;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Observer;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
 
+/**
+ * @property-read float $temperature
+ * @property-read float $humidity
+ * @property-read float $pressure
+ * @method float getTemperature()
+ * @method float getHumidity()
+ * @method float getPressure()
+ */
 class WeatherData implements Subject
 {
     private float $temperature = 0.0;
@@ -34,7 +42,7 @@ class WeatherData implements Subject
     public function notifyObservers(): void
     {
         foreach ($this->observers as $observer) {
-            $observer->update($this->temperature, $this->humidity, $this->pressure);
+            $observer->update();
         }
     }
 

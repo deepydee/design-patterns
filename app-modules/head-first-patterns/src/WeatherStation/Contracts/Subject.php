@@ -16,4 +16,8 @@ interface Subject
      * состояния субъекта
      */
     public function notifyObservers(): void;
+
+    public function getTemperature(): float;
+    public function getHumidity(): float;
+    public function getPressure(): float;
 }

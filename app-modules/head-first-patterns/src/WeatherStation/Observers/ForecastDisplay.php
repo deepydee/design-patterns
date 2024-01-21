@@ -29,8 +29,10 @@ final class ForecastDisplay implements Observer, DisplayElement
      * При вызове update() мы сохраняем значения температуры и влажности,
      * после чего вызываем display()
      */
-    public function update(float $temp, float $humidity, float $pressure): void
+    public function update(): void
     {
+        $pressure = $this->weatherData->getPressure();
+
         $this->lastPressure = $this->currentPressure;
         $this->currentPressure = $pressure;
         $this->display();
