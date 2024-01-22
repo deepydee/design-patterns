@@ -6,6 +6,12 @@ use App\Http\Controllers\Controller;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
 use Modules\HeadFirstPatterns\SimUDuck\MallardDuck;
 use Modules\HeadFirstPatterns\SimUDuck\ModelDuck;
+use Modules\HeadFirstPatterns\Starbuzz\Beverages\DarkRoast;
+use Modules\HeadFirstPatterns\Starbuzz\Beverages\Espresso;
+use Modules\HeadFirstPatterns\Starbuzz\Beverages\HouseBlend;
+use Modules\HeadFirstPatterns\Starbuzz\Condiments\Mocha;
+use Modules\HeadFirstPatterns\Starbuzz\Condiments\Whip;
+use Modules\HeadFirstPatterns\Starbuzz\Enums\Size;
 use Modules\HeadFirstPatterns\WeatherStation\Observers\CurrentConditionsDisplay;
 use Modules\HeadFirstPatterns\WeatherStation\Observers\ForecastDisplay;
 use Modules\HeadFirstPatterns\WeatherStation\Observers\HeatIndexDisplay;
@@ -42,5 +48,24 @@ class HeadFirstController extends Controller
         echo '<br>';
         $weatherData->setMeasurements(78, 90, 29.2);
         echo '<br>';
+    }
+
+    public function starBuzz(): void
+    {
+        $beverage = new Espresso();
+        echo $beverage->getDescription() . ' $' . $beverage->cost();
+
+        $beverage2 = new DarkRoast();
+        $beverage2->setSize(Size::TALL);
+        $beverage2 = new Mocha($beverage2);
+        $beverage2 = new Mocha($beverage2);
+        $beverage2 = new Whip($beverage2);
+        echo '<br>' . $beverage2->getDescription() . ' $' . $beverage2->cost();
+
+        $beverage3 = new HouseBlend();
+        $beverage3 = new Mocha($beverage3);
+        $beverage3 = new Mocha($beverage3);
+        $beverage3 = new Whip($beverage3);
+        echo '<br>' . $beverage3->getDescription() . ' $' . $beverage3->cost();
     }
 }
