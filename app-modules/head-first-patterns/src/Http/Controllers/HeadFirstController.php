@@ -3,6 +3,8 @@
 namespace Modules\HeadFirstPatterns\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
+use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\PizzaStore;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
 use Modules\HeadFirstPatterns\SimUDuck\MallardDuck;
 use Modules\HeadFirstPatterns\SimUDuck\ModelDuck;
@@ -67,5 +69,14 @@ class HeadFirstController extends Controller
         $beverage3 = new Mocha($beverage3);
         $beverage3 = new Whip($beverage3);
         echo '<br>' . $beverage3->getDescription() . ' $' . $beverage3->cost();
+    }
+
+    public function orderPizzaSimple(PizzaStore $pizzaStore): void
+    {
+        $pizzaStore->orderPizza(PizzaType::CHEESE);
+
+        echo '<br>';
+
+        $pizzaStore->orderPizza(PizzaType::CLAM);
     }
 }
