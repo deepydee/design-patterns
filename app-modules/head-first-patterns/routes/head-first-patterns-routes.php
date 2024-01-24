@@ -6,3 +6,4 @@ Route::get('/head-first-patterns/simuduck', [HeadFirstController::class, 'simUDu
 Route::get('/head-first-patterns/weather', [HeadFirstController::class, 'weatherStation']);
 Route::get('/head-first-patterns/starbuzz', [HeadFirstController::class, 'starBuzz']);
 Route::get('/head-first-patterns/order-pizza/simple', [HeadFirstController::class, 'orderPizzaSimple']);
+Route::get('/head-first-patterns/order-pizza/factory-method', [HeadFirstController::class, 'orderPizzaFactoryMethod']);

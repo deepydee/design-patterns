@@ -3,6 +3,8 @@
 namespace Modules\HeadFirstPatterns\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoStylePizzaStore;
+use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\NYStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\PizzaStore;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
@@ -78,5 +80,16 @@ class HeadFirstController extends Controller
         echo '<br>';
 
         $pizzaStore->orderPizza(PizzaType::CLAM);
+    }
+
+    public function orderPizzaFactoryMethod(
+        NYStylePizzaStore $nyStylePizzaStore,
+        ChicagoStylePizzaStore $chicagoStylePizzaStore,
+    ) {
+        $pizza = $nyStylePizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Enums\PizzaType::CHEESE);
+        echo  'Ethan ordered a ' . $pizza->getName() . '<br>';
+
+        $pizza = $chicagoStylePizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Enums\PizzaType::VEGGIE);
+        echo 'Joel ordered a ' . $pizza->getName() . '<br>';
     }
 }
