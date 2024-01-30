@@ -68,6 +68,7 @@
         }
     },
     "scripts": {
+        "cghooks": "vendor/bin/cghooks",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -85,6 +86,21 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "hooks": {
+            "config": {
+                "stop-on-failure": ["pre-push"]
+            },
+            "pre-commit": [
+                "echo committing as $(git config user.name)",
+                "./vendor/bin/pint --dirty",
+                "./vendor/bin/phpstan analyze"
+            ],
+            "pre-push": [
+                "./vendor/bin/pint --dirty",
+                "./vendor/bin/phpstan analyze",
+                "php artisan test"
+            ]
         }
     },
     "config": {
