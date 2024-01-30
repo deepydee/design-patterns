@@ -18,7 +18,7 @@ class WidgetBigProduct extends WidgetAbstract
     private function getRealizationLogic(Product $product): array
     {
         $id = $product->id;
-        $fullTitle = $product->id . '::::' . $product->name;
+        $fullTitle = $product->id.'::::'.$product->name;
         $description = $product->description;
 
         return compact('id', 'fullTitle', 'description');

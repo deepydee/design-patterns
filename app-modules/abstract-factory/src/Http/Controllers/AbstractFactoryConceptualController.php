@@ -3,7 +3,6 @@
 namespace Modules\AbstractFactory\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\AbstractFactory\Conceptual\Contracts\AbstractFactory;
 use Modules\AbstractFactory\Conceptual\Factories\ConcreteFactory1;
 use Modules\AbstractFactory\Conceptual\Factories\ConcreteFactory2;
@@ -34,7 +33,7 @@ class AbstractFactoryConceptualController extends Controller
         $productA = $factory->createProductA();
         $productB = $factory->createProductB();
 
-        echo $productB->usefulFunctionB() . "\n";
-        echo $productB->anotherUsefulFunctionB($productA) . "\n";
+        echo $productB->usefulFunctionB()."\n";
+        echo $productB->anotherUsefulFunctionB($productA)."\n";
     }
 }

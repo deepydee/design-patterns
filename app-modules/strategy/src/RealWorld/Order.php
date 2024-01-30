@@ -10,6 +10,7 @@ namespace Modules\Strategy\RealWorld;
 class Order
 {
     public string $email;
+
     public float $total;
 
     /**
@@ -18,6 +19,7 @@ class Order
     private static array $orders = [];
 
     public int $id;
+
     public string $status;
 
     /**
@@ -27,7 +29,7 @@ class Order
     public function __construct(array $attributes)
     {
         $this->id = count(static::$orders);
-        $this->status = "new";
+        $this->status = 'new';
 
         foreach ($attributes as $key => $value) {
             $this->{$key} = $value;
@@ -53,7 +55,7 @@ class Order
      */
     public function complete(): void
     {
-        $this->status = "completed";
+        $this->status = 'completed';
         echo "Order: #{$this->id} is now {$this->status}.";
     }
 }

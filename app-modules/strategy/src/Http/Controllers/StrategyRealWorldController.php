@@ -39,7 +39,7 @@ class StrategyRealWorldController extends Controller
             'total' => 19.95,
         ]);
 
-        echo "<br>Client: List my orders, please<br>";
+        echo '<br>Client: List my orders, please<br>';
 
         $controller->get('/orders');
 
@@ -47,9 +47,9 @@ class StrategyRealWorldController extends Controller
 
         $controller->get('/order/1/payment/paypal');
 
-        echo "<br>Client: ...pushes the Pay button...<br>";
+        echo '<br>Client: ...pushes the Pay button...<br>';
         echo "<br>Client: Oh, I'm redirected to the PayPal.<br>";
-        echo "<br>Client: ...pays on the PayPal...<br>";
+        echo '<br>Client: ...pays on the PayPal...<br>';
         echo "<br>Client: Alright, I'm back with you, guys.<br>";
 
         $controller->get('/order/1/payment/paypal/return'.

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Mediator\RealWorld;
 
-use Modules\Mediator\RealWorld\EventDispatcher;
-
 /**
  * Простая вспомогательная функция для предоставления глобального доступа к
  * диспетчеру событий.

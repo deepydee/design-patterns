@@ -12,12 +12,12 @@ class RoleCheckMiddleware extends Middleware
 {
     public function check(string $email, string $password): bool
     {
-        if ($email === "admin@example.com") {
-            echo "RoleCheckMiddleware: Hello, admin!<br>";
+        if ($email === 'admin@example.com') {
+            echo 'RoleCheckMiddleware: Hello, admin!<br>';
 
             return true;
         }
-        echo "RoleCheckMiddleware: Hello, user!<br>";
+        echo 'RoleCheckMiddleware: Hello, user!<br>';
 
         return parent::check($email, $password);
     }

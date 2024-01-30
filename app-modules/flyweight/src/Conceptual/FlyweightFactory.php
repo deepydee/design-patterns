@@ -35,7 +35,7 @@ class FlyweightFactory
             echo "FlyweightFactory: Can't find a flyweight, creating new one.<br>";
             $this->flyweights[$key] = new Flyweight($sharedState);
         } else {
-            echo "FlyweightFactory: Reusing existing flyweight.<br>";
+            echo 'FlyweightFactory: Reusing existing flyweight.<br>';
         }
 
         return $this->flyweights[$key];
@@ -48,7 +48,7 @@ class FlyweightFactory
         echo "<br>FlyweightFactory: I have $count flyweights:<br>";
 
         foreach ($this->flyweights as $key => $flyweight) {
-            echo $key . "<br>";
+            echo $key.'<br>';
         }
     }
 

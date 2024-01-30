@@ -15,7 +15,7 @@ final class DangerousHTMLTagsFilter extends TextFormat
     ];
 
     private $dangerousAttributes = [
-        "onclick", "onkeypress", // ...
+        'onclick', 'onkeypress', // ...
     ];
 
     public function formatText(string $text): string
@@ -30,7 +30,7 @@ final class DangerousHTMLTagsFilter extends TextFormat
             $text = preg_replace_callback('|<(.*?)>|', function ($matches) use ($attribute) {
                 $result = preg_replace("|$attribute=|i", '', $matches[1]);
 
-                return "<" . $result . ">";
+                return '<'.$result.'>';
             }, $text);
         }
 

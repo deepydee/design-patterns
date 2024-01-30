@@ -52,6 +52,6 @@ class Composite extends Component
             $results[] = $child->operation();
         }
 
-        return "Branch(" . implode("+", $results) . ")";
+        return 'Branch('.implode('+', $results).')';
     }
 }

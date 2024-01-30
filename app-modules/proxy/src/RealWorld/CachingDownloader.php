@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Proxy\RealWorld;
 
 use Modules\Proxy\RealWorld\Contracts\Downloarer;
-use Modules\Proxy\RealWorld\SimpleDownloader;
 
 /**
  * Класс Заместителя – это попытка сделать загрузку более эффективной. Он
@@ -31,7 +30,7 @@ class CachingDownloader implements Downloarer
             $result = $this->downloader->download($url);
             $this->cache[$url] = $result;
         } else {
-            echo "CacheProxy HIT. Retrieving result from cache.<br>";
+            echo 'CacheProxy HIT. Retrieving result from cache.<br>';
         }
 
         return $this->cache[$url];

@@ -6,8 +6,6 @@ namespace Modules\HeadFirstPatterns\PizzaStore\SimpleFactory;
 
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Contracts\Pizza;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
-use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\SimplePizzaFactory;
-
 
 class PizzaStore
 {

@@ -7,6 +7,8 @@ namespace Modules\Bridge\Widget\Entities;
 class Client
 {
     public int $id = 200;
+
     public string $name = 'Client Name';
+
     public string $bio = 'Client Bio';
 }

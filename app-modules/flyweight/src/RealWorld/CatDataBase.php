@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Flyweight\RealWorld;
 
-use Modules\Flyweight\RealWorld\Cat;
-use Modules\Flyweight\RealWorld\CatVariation;
-
 /**
  * Фабрика Легковесов хранит объекты Контекст и Легковес, эффективно скрывая
  * любое упоминание о паттерне Легковес от клиента.
@@ -76,7 +73,7 @@ class CatDataBase
                 return $cat;
             }
         }
-        echo "CatDataBase: Sorry, your query does not yield any results.";
+        echo 'CatDataBase: Sorry, your query does not yield any results.';
     }
 
     /**
@@ -84,6 +81,6 @@ class CatDataBase
      */
     private function getKey(array $data): string
     {
-        return md5(implode("_", $data));
+        return md5(implode('_', $data));
     }
 }

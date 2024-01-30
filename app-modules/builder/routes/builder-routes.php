@@ -8,4 +8,3 @@ use Modules\Builder\Http\Controllers\BuilderRealWorldController;
 Route::get('/builder/conceptual', BuilderConceptualController::class);
 Route::get('/builder/real-world', BuilderRealWorldController::class);
 Route::get('/builder/blog-post', BuilderBlogPostController::class);
-

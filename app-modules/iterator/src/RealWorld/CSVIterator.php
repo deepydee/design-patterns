@@ -38,8 +38,8 @@ class CSVIterator implements \Iterator
     /**
      * Конструктор пытается открыть CSV-файл. Он выдаёт исключение при ошибке.
      *
-     * @param string $file CSV-файл.
-     * @param string $delimiter Разделитель.
+     * @param  string  $file CSV-файл.
+     * @param  string  $delimiter Разделитель.
      *
      * @throws \Exception
      */
@@ -103,6 +103,7 @@ class CSVIterator implements \Iterator
         if (is_resource($this->filePointer)) {
             if (feof($this->filePointer)) {
                 fclose($this->filePointer);
+
                 return false;
             }
 
@@ -111,5 +112,4 @@ class CSVIterator implements \Iterator
 
         return false;
     }
-
 }

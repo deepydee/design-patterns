@@ -26,12 +26,12 @@ class AdapterRealWorldController extends Controller
 {
     public function __invoke()
     {
-        echo "Client code is designed correctly and works with email notifications:<br>";
+        echo 'Client code is designed correctly and works with email notifications:<br>';
         $notification = new EmailNotification('developers@example.com');
         $this->clientCode($notification);
-        echo "<br><br>";
+        echo '<br><br>';
 
-        echo "The same client code can work with other classes via adapter:<br>";
+        echo 'The same client code can work with other classes via adapter:<br>';
         $slackApi = new SlackApi(login: 'example.com', apiKey: 'XXXXXXXX');
         $notification = new SlackNotification(slack: $slackApi, chatId: 'Example.com Developers');
         $this->clientCode($notification);

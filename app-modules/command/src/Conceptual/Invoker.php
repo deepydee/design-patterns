@@ -13,6 +13,7 @@ use Modules\Command\Conceptual\Contracts\Command;
 class Invoker
 {
     private Command $onStart;
+
     private Command $onFinish;
 
     /**
@@ -34,14 +35,14 @@ class Invoker
      */
     public function doSomethingImportant(): void
     {
-        echo "Invoker: Does anybody want something done before I begin?<br>";
+        echo 'Invoker: Does anybody want something done before I begin?<br>';
         if ($this->onStart instanceof Command) {
             $this->onStart->execute();
         }
 
-        echo "Invoker: ...doing something really important...<br>";
+        echo 'Invoker: ...doing something really important...<br>';
 
-        echo "Invoker: Does anybody want something done after I finish?<br>";
+        echo 'Invoker: Does anybody want something done after I finish?<br>';
         if ($this->onFinish instanceof Command) {
             $this->onFinish->execute();
         }

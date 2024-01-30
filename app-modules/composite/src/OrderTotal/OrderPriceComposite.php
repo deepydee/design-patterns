@@ -6,17 +6,19 @@ namespace Modules\Composite\OrderTotal;
 
 use Modules\Composite\OrderTotal\Classes\ObjectsFactory;
 use Modules\Composite\OrderTotal\Contracts\Composite;
-use Symfony\Component\HttpKernel\EventListener\DumpListener;
 
 class OrderPriceComposite
 {
     private int $ingredientsCnt = 10;
+
     private array $ingredients = [];
 
     private int $productsCnt = 5;
+
     private array $products = [];
 
     private int $ordersCnt = 2;
+
     private array $orders = [];
 
     public function __construct(private ObjectsFactory $factory)
@@ -48,12 +50,12 @@ class OrderPriceComposite
             ];
         }
 
-        echo "Result: <pre>";
+        echo 'Result: <pre>';
         print_r($result);
-        echo "</pre>";
+        echo '</pre>';
 
-        echo "Orders: <pre>";
+        echo 'Orders: <pre>';
         dump($this->orders);
-        echo "</pre>";
+        echo '</pre>';
     }
 }

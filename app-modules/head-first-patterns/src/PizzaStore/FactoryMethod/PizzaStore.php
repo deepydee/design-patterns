@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\HeadFirstPatterns\PizzaStore\FactoryMethod;
 
-use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Contracts\Pizza;
-use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\Pizza as AbstractPizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Enums\PizzaType;
-
+use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\Pizza as AbstractPizza;
 
 abstract class PizzaStore
 {

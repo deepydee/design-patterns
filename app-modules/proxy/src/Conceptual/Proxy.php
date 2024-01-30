@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Proxy\Conceptual;
 
 use Modules\Proxy\Conceptual\Contracts\Subject;
-use Modules\Proxy\Conceptual\RealSubject;
 
 /**
  * Интерфейс Заместителя идентичен интерфейсу Реального Субъекта.
@@ -38,13 +37,13 @@ class Proxy implements Subject
     private function checkAccess(): bool
     {
         // Некоторые реальные проверки должны проходить здесь.
-        echo "Proxy: Checking access prior to firing a real request.<br>";
+        echo 'Proxy: Checking access prior to firing a real request.<br>';
 
         return true;
     }
 
     private function logAccess(): void
     {
-        echo "Proxy: Logging the time of request.<br>";
+        echo 'Proxy: Logging the time of request.<br>';
     }
 }

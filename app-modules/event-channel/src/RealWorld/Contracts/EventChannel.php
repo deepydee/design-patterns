@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\EventChannel\RealWorld\Contracts;
 
-use Modules\EventChannel\RealWorld\Contracts\Subscriber;
-
 /**
  * Интерфейс канала событий.
  * Связующеезвено между подписчиками и издателями.

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\State\Conceptual;
 
-use Modules\State\Conceptual\State;
-
 /**
  * Контекст определяет интерфейс, представляющий интерес для клиентов. Он также
  * хранит ссылку на экземпляр подкласса Состояния, который отображает текущее
@@ -28,7 +26,7 @@ class Context
      */
     public function transitionTo(State $state): void
     {
-        echo 'Context: Transition to '.get_class($state).".<br>";
+        echo 'Context: Transition to '.get_class($state).'.<br>';
         $this->state = $state;
         $this->state->setContext($this);
     }

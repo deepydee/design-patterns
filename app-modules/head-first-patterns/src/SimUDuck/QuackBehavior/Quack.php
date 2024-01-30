@@ -10,6 +10,6 @@ final class Quack implements QuackBehavior
 {
     public function quack(): void
     {
-        echo "Quack<br>";
+        echo 'Quack<br>';
     }
 }

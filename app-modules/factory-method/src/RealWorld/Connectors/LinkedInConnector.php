@@ -17,7 +17,7 @@ final class LinkedInConnector implements SocialNetworkConnector
 
     public function logIn(): void
     {
-        echo "Send HTTP API request to log in user $this->email with " .
+        echo "Send HTTP API request to log in user $this->email with ".
             "password $this->password\n";
     }
 

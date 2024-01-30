@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Builder\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\Builder\Conceptual\Builders\ConcreteBuilder1;
 use Modules\Builder\Conceptual\Director;
 
@@ -33,16 +32,16 @@ class BuilderConceptualController extends Controller
         $builder = new ConcreteBuilder1();
         $director->setBuilder($builder);
 
-        echo "Standard basic product:<br>";
+        echo 'Standard basic product:<br>';
         $director->buildMinimalViableProduct();
         $builder->getProduct()->listParts();
 
-        echo "Standard full featured product:<br>";
+        echo 'Standard full featured product:<br>';
         $director->buildFullFeaturedProduct();
         $builder->getProduct()->listParts();
 
         // Помните, что паттерн Строитель можно использовать без класса Директор.
-        echo "Custom product:<br>";
+        echo 'Custom product:<br>';
         $builder->producePartA();
         $builder->producePartC();
         $builder->getProduct()->listParts();

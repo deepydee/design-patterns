@@ -33,10 +33,10 @@ class ChainOfResponsibilitiesRealWorldController extends Controller
         // ...
 
         do {
-            echo "<br>Enter your email:<br>";
+            echo '<br>Enter your email:<br>';
             $email = 'user@example.com';
 
-            echo "Enter your password:<br>";
+            echo 'Enter your password:<br>';
             $password = 'user_pass';
 
             $success = $server->logIn($email, $password);

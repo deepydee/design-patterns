@@ -25,7 +25,7 @@ class DecoratorConceptualController extends Controller
         $simple = new ConcreteComponent();
         echo "Client: I've got a simple component:<br>";
         $this->clientCode($simple);
-        echo "<br><br>";
+        echo '<br><br>';
 
         /**
          * ...так и декорированные.

@@ -13,30 +13,30 @@ class SalaryReport implements Visitor
 {
     public function visitCompany(Company $company): string
     {
-        $output = "";
+        $output = '';
         $total = 0;
 
         foreach ($company->getDepartments() as $department) {
             $total += $department->getCost();
-            $output .= "<br>--" . $this->visitDepartment($department);
+            $output .= '<br>--'.$this->visitDepartment($department);
         }
 
-        $output = $company->getName() .
-            " (" . $total . ")<br>" . $output;
+        $output = $company->getName().
+            ' ('.$total.')<br>'.$output;
 
         return $output;
     }
 
     public function visitDepartment(Department $department): string
     {
-        $output = "";
+        $output = '';
 
         foreach ($department->getEmployees() as $employee) {
-            $output .= "   " . $this->visitEmployee($employee);
+            $output .= '   '.$this->visitEmployee($employee);
         }
 
-        $output = $department->getName() .
-            " (" . $department->getCost() . ")<br><br>" .
+        $output = $department->getName().
+            ' ('.$department->getCost().')<br><br>'.
             $output;
 
         return $output;
@@ -44,8 +44,8 @@ class SalaryReport implements Visitor
 
     public function visitEmployee(Employee $employee): string
     {
-        return $employee->getSalary() .
-            " " . $employee->getName() .
-            " (" . $employee->getPosition() . ")<br>";
+        return $employee->getSalary().
+            ' '.$employee->getName().
+            ' ('.$employee->getPosition().')<br>';
     }
 }

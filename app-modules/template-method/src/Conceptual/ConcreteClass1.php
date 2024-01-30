@@ -9,15 +9,15 @@ namespace Modules\TemplateMethod\Conceptual;
  * класса. Они также могут переопределить некоторые операции с реализацией по
  * умолчанию.
  */
-class ConcreteClass1  extends AbstractClass
+class ConcreteClass1 extends AbstractClass
 {
     protected function requiredOperations1(): void
     {
-        echo "ConcreteClass1 says: Implemented Operation1<br>";
+        echo 'ConcreteClass1 says: Implemented Operation1<br>';
     }
 
     protected function requiredOperation2(): void
     {
-        echo "ConcreteClass1 says: Implemented Operation2<br>";
+        echo 'ConcreteClass1 says: Implemented Operation2<br>';
     }
 }

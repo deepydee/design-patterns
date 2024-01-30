@@ -8,9 +8,10 @@ use Modules\HeadFirstPatterns\WeatherStation\Contracts\DisplayElement;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Observer;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
 
-final class ForecastDisplay implements Observer, DisplayElement
+final class ForecastDisplay implements DisplayElement, Observer
 {
     private float $currentPressure = 29.92;
+
     private float $lastPressure = 0.0;
 
     private Subject $weatherData;
@@ -43,14 +44,14 @@ final class ForecastDisplay implements Observer, DisplayElement
      */
     public function display(): void
     {
-        echo "Forecast: ";
+        echo 'Forecast: ';
 
         if ($this->currentPressure > $this->lastPressure) {
-            echo "Improving weather on the way!<br>";
+            echo 'Improving weather on the way!<br>';
         } elseif ($this->currentPressure == $this->lastPressure) {
-            echo "More of the same<br>";
+            echo 'More of the same<br>';
         } elseif ($this->currentPressure < $this->lastPressure) {
-            echo "Watch out for cooler, rainy weather<br>";
+            echo 'Watch out for cooler, rainy weather<br>';
         }
     }
 }

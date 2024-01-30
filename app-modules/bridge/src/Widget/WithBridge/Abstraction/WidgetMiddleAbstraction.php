@@ -32,7 +32,7 @@ class WidgetMiddleAbstraction extends WidgetAbstract
     private function getMiddleTitle(): string
     {
         return $this->getRealization()->getId()
-            . '->'
-            . $this->getRealization()->getTitle();
+            .'->'
+            .$this->getRealization()->getTitle();
     }
 }

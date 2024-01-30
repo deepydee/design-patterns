@@ -3,7 +3,6 @@
 namespace Modules\AbstractFactory\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\AbstractFactory\RealWorld\Factories\PHP\PHPTemplateFactory;
 use Modules\AbstractFactory\RealWorld\Factories\Twig\TwigTemplateFactory;
 use Modules\AbstractFactory\RealWorld\Page;
@@ -32,7 +31,6 @@ use Modules\AbstractFactory\RealWorld\Page;
  * будет сделать — это подать в приложение объект фабрики другого типа и ничего
  * при этом не сломается.
  */
-
 class AbstractFactoryRealWorldController extends Controller
 {
     public function __invoke()
@@ -48,6 +46,7 @@ class AbstractFactoryRealWorldController extends Controller
 
         // Можете убрать комментарии, если у вас установлен Twig.
 
-        echo "Testing rendering with the Twig factory:\n"; echo $page->render(new TwigTemplateFactory());
+        echo "Testing rendering with the Twig factory:\n";
+        echo $page->render(new TwigTemplateFactory());
     }
 }

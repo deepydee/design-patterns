@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Composite\RealWorld;
 
-use Modules\Composite\RealWorld\FormElement;
-
 /**
  * Базовый класс Контейнер реализует инфраструктуру для управления дочерними
  * объектами, повторно используемую всеми Конкретными Контейнерами.
@@ -30,7 +28,7 @@ abstract class FieldComposite extends FormElement
     {
         $this->fields = array_filter(
             $this->fields,
-            fn(FormElement $child) => $child !== $component
+            fn (FormElement $child) => $child !== $component
         );
     }
 
@@ -71,7 +69,7 @@ abstract class FieldComposite extends FormElement
      */
     public function render(): string
     {
-        $output = "";
+        $output = '';
 
         foreach ($this->fields as $name => $field) {
             $output .= $field->render();

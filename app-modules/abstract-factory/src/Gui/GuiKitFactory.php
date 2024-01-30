@@ -16,7 +16,7 @@ class GuiKitFactory
         return match ($type) {
             KitType::Bootstrap => new BootstrapFactory(),
             KitType::Semanticui => new SemanticUIFactory(),
-            default => throw new \InvalidArgumentException('Unknown kit type: ' . $type),
+            default => throw new \InvalidArgumentException('Unknown kit type: '.$type),
         };
     }
 }

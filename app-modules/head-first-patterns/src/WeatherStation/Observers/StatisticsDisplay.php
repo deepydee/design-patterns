@@ -8,12 +8,16 @@ use Modules\HeadFirstPatterns\WeatherStation\Contracts\DisplayElement;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Observer;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
 
-final class StatisticsDisplay implements Observer, DisplayElement
+final class StatisticsDisplay implements DisplayElement, Observer
 {
     private float $maxTemp = 0.0;
+
     private float $minTemp = 200;
+
     private float $tempSum = 0.0;
+
     private int $numReadings = 0;
+
     private Subject $weatherData;
 
     /**
@@ -53,8 +57,8 @@ final class StatisticsDisplay implements Observer, DisplayElement
      */
     public function display(): void
     {
-        echo 'AVG/Max/Min temperature = ' .
-        ($this->tempSum / $this->numReadings) . '/'
-        . $this->maxTemp . '/' . $this->minTemp . '<br>';
+        echo 'AVG/Max/Min temperature = '.
+        ($this->tempSum / $this->numReadings).'/'
+        .$this->maxTemp.'/'.$this->minTemp.'<br>';
     }
 }

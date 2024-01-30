@@ -24,13 +24,13 @@ class ProxyRealWorldController extends Controller
 {
     public function __invoke()
     {
-        echo "Executing client code with real subject:<br>";
+        echo 'Executing client code with real subject:<br>';
         $realSubject = new SimpleDownloader();
         $this->clientCode($realSubject);
 
-        echo "<br>";
+        echo '<br>';
 
-        echo "Executing the same client code with a proxy:<br>";
+        echo 'Executing the same client code with a proxy:<br>';
         $proxy = new CachingDownloader($realSubject);
         $this->clientCode($proxy);
     }

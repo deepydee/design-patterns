@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Decorator\Orders\Classes;
 
-use Modules\Decorator\Orders\Classes\OrderUpdate;
 use Modules\Decorator\Orders\Contracts\OrderUpdate as OrderUpdateInterface;
 use Modules\Decorator\Orders\Decorators\OrderUpdateDecoratorLogger;
 use Modules\Decorator\Orders\Decorators\OrderUpdateDecoratorNotifierUsers;

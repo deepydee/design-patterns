@@ -9,4 +9,3 @@ Route::get('/bridge/conceptual', BridgeConceptualController::class);
 Route::get('/bridge/real-world', BridgeRealWorldController::class);
 Route::get('/bridge/without', WithoutBridgeController::class);
 Route::get('/bridge/with', WithBridgeController::class);
-

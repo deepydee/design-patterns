@@ -11,7 +11,9 @@ namespace Modules\Prototype\Conceptual;
 class Prototype
 {
     public $primitive;
+
     public $component;
+
     public $circularReference;
 
     /**

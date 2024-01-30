@@ -12,8 +12,8 @@ class CommandConceptualController extends Controller
 {
     public function __invoke(Invoker $invoker, Receiver $receiver)
     {
-        $invoker->setOnStart(new SimpleCommand("Say Hi!"));
-        $invoker->setOnFinish(new ComplexCommand($receiver, "Send email", "Save report"));
+        $invoker->setOnStart(new SimpleCommand('Say Hi!'));
+        $invoker->setOnFinish(new ComplexCommand($receiver, 'Send email', 'Save report'));
 
         $invoker->doSomethingImportant();
     }

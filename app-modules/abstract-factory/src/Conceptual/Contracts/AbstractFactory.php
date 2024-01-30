@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-namespace  Modules\AbstractFactory\Conceptual\Contracts;
-
-use Modules\AbstractFactory\Conceptual\Contracts\AbstractProductA;
-use Modules\AbstractFactory\Conceptual\Contracts\AbstractProductB;
+namespace Modules\AbstractFactory\Conceptual\Contracts;
 
 /**
  * Интерфейс Абстрактной Фабрики объявляет набор методов, которые возвращают

@@ -38,7 +38,7 @@ class ThrottlingMiddleware extends Middleware
 
         if ($this->request > $this->requestPerMinute) {
             echo 'ThrottlingMiddleware: Request limit exceeded!<br>';
-            die();
+            exit();
         }
 
         return parent::check($email, $password);

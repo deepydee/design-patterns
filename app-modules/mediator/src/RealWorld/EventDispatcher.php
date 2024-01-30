@@ -38,23 +38,23 @@ class EventDispatcher
         }
     }
 
-    private function getEventObservers(string $event = "*"): array
+    private function getEventObservers(string $event = '*'): array
     {
         $this->initEventGroup($event);
         $group = $this->observers[$event];
-        $all = $this->observers["*"];
+        $all = $this->observers['*'];
 
         return array_merge($group, $all);
     }
 
-    public function attach(Observer $observer, string $event = "*"): void
+    public function attach(Observer $observer, string $event = '*'): void
     {
         $this->initEventGroup($event);
 
         $this->observers[$event][] = $observer;
     }
 
-    public function detach(Observer $observer, string $event = "*"): void
+    public function detach(Observer $observer, string $event = '*'): void
     {
         foreach ($this->getEventObservers($event) as $key => $s) {
             if ($s === $observer) {

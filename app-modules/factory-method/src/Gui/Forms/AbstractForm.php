@@ -22,5 +22,5 @@ abstract class AbstractForm implements Form
     /**
      * Получаем инструментарий для рисования объектов формы
      */
-    abstract function createGuiKit(): GuiFactory;
+    abstract public function createGuiKit(): GuiFactory;
 }

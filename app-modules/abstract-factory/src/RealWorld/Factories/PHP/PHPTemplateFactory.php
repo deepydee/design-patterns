@@ -8,9 +8,6 @@ use Modules\AbstractFactory\RealWorld\Contracts\PageTemplate;
 use Modules\AbstractFactory\RealWorld\Contracts\TemplateFactory;
 use Modules\AbstractFactory\RealWorld\Contracts\TemplateRenderer;
 use Modules\AbstractFactory\RealWorld\Contracts\TitleTemplate;
-use Modules\AbstractFactory\RealWorld\Factories\PHP\PHPTemplatePageTemplate;
-use Modules\AbstractFactory\RealWorld\Factories\PHP\PHPTemplateRenderer;
-use Modules\AbstractFactory\RealWorld\Factories\PHP\PHPTemplateTitleTemplate;
 
 /**
  * А эта Конкретная Фабрика создает шаблоны PHPTemplate.

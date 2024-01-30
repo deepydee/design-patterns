@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Prototype\Conceptual;
 
-use Modules\Prototype\Conceptual\Prototype;
-
 class ComponentWithBackReference
 {
     public Prototype $prototype;

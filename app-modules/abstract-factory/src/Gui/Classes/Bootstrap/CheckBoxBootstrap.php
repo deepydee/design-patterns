@@ -10,6 +10,6 @@ class CheckBoxBootstrap implements CheckBox
 {
     public function draw(): void
     {
-        echo __CLASS__ . ' (CheckBox Bootstrap) <br>';
+        echo __CLASS__.' (CheckBox Bootstrap) <br>';
     }
 }

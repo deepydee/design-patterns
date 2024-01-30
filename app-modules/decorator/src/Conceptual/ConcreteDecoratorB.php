@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Decorator\Conceptual;
 
-use Modules\Decorator\Conceptual\Decorator;
-
 /**
  * Декораторы могут выполнять своё поведение до или после вызова обёрнутого
  * объекта.
@@ -19,6 +17,6 @@ class ConcreteDecoratorB extends Decorator
      */
     public function operation(): string
     {
-        return "ConcreteDecoratorB(" . parent::operation() . ")";
+        return 'ConcreteDecoratorB('.parent::operation().')';
     }
 }

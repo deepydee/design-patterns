@@ -14,7 +14,7 @@ class StaticFactory implements MessengerStaticFactory
     {
         $messenger = new AppMessenger();
 
-        switch($type) {
+        switch ($type) {
             case MessageType::Email:
                 $messenger->toEmail();
                 $sender = 'sender@a.com';

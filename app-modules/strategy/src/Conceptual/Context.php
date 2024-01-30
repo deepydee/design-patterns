@@ -32,8 +32,8 @@ class Context
         // ...
 
         echo "Context: Sorting data using the strategy (not sure how it'll do it)<br>";
-        $result = $this->strategy->doAlgorithm(["a", "b", "c", "d", "e"]);
-        echo implode(",", $result) . "<br>";
+        $result = $this->strategy->doAlgorithm(['a', 'b', 'c', 'd', 'e']);
+        echo implode(',', $result).'<br>';
 
         // ...
     }

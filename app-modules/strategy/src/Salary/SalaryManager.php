@@ -48,7 +48,7 @@ class SalaryManager
 
     private function getStrategyByUser(User $user): SalaryStrategyInterface
     {
-        return match($user->departmentName()) {
+        return match ($user->departmentName()) {
             Department::Florist => new FloristStrategy(),
             Department::Logist => new LogistStrategy(),
             Department::CourierHiking => new CourierHikingStrategy(),
@@ -61,6 +61,7 @@ class SalaryManager
     private function setSalaryStrategy(SalaryStrategyInterface $salaryStrategy): self
     {
         $this->salaryStrategy = $salaryStrategy;
+
         return $this;
     }
 

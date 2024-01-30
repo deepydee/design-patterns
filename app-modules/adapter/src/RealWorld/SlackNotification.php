@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Adapter\RealWorld;
 
 use Modules\Adapter\RealWorld\Contracts\Notification;
-use Modules\Adapter\RealWorld\SlackApi;
 
 /**
  * Адаптер – класс, который связывает Целевой интерфейс и Адаптируемый класс.
@@ -23,7 +22,7 @@ class SlackNotification implements Notification
      */
     public function send(string $title, string $message): void
     {
-        $slackMessage = "#" . $title . "# " . strip_tags($message);
+        $slackMessage = '#'.$title.'# '.strip_tags($message);
         $this->slack->logIn();
         $this->slack->sendMessage($this->chatId, $slackMessage);
     }
@@ -37,6 +36,6 @@ class SlackNotification implements Notification
             return call_user_func_array([$this->slack, $name], $arguments);
         }
 
-        throw new \Exception('Call to undefined method SlackApi::' . $name . '()');
+        throw new \Exception('Call to undefined method SlackApi::'.$name.'()');
     }
 }

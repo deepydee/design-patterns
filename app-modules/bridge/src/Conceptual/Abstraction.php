@@ -19,7 +19,7 @@ class Abstraction
 
     public function operation(): string
     {
-        return "Abstraction: Base operation with:<br>" .
+        return 'Abstraction: Base operation with:<br>'.
             $this->implementation->operationImplementation();
     }
 }

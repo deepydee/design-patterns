@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Command\RealWorld\Commands;
+
 use Modules\Command\RealWorld\Queue;
 
 /**
@@ -20,7 +21,7 @@ class IMDBGenrePageScrapingCommand extends WebScrapingCommand
 
     public function getURL(): string
     {
-        return $this->url . '?page=' . $this->page;
+        return $this->url.'?page='.$this->page;
     }
 
     /**
@@ -30,15 +31,15 @@ class IMDBGenrePageScrapingCommand extends WebScrapingCommand
     public function parse(string $html): void
     {
         preg_match_all("|href=\"(/title/.*?/)\?ref_=adv_li_tt\"|", $html, $matches);
-        echo "IMDBGenrePageScrapingCommand: Discovered " . count($matches[1]) . " movies.\n";
+        echo 'IMDBGenrePageScrapingCommand: Discovered '.count($matches[1])." movies.\n";
 
         foreach ($matches[1] as $moviePath) {
-            $url = "https://www.imdb.com" . $moviePath;
+            $url = 'https://www.imdb.com'.$moviePath;
             Queue::get()->add(new IMDBMovieScrapingCommand($url));
         }
 
         // Извлечение URL следующей страницы.
-        if (preg_match("|Next &#187;</a>|", $html)) {
+        if (preg_match('|Next &#187;</a>|', $html)) {
             Queue::get()->add(new IMDBGenrePageScrapingCommand($this->url, $this->page + 1));
         }
     }

@@ -18,13 +18,13 @@ class ProxyConceptualController extends Controller
 {
     public function __invoke()
     {
-        echo "Client: Executing the client code with a real subject:<br>";
+        echo 'Client: Executing the client code with a real subject:<br>';
         $realSubject = new RealSubject();
         $this->clientCode($realSubject);
 
-        echo "<br>";
+        echo '<br>';
 
-        echo "Client: Executing the same client code with a proxy:<br>";
+        echo 'Client: Executing the same client code with a proxy:<br>';
         $proxy = new Proxy($realSubject);
         $this->clientCode($proxy);
     }

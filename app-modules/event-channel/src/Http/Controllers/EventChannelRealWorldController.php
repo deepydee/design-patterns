@@ -7,7 +7,6 @@ use Modules\EventChannel\RealWorld\EventChannel;
 use Modules\EventChannel\RealWorld\Publisher;
 use Modules\EventChannel\RealWorld\Subscriber;
 
-
 class EventChannelRealWorldController extends Controller
 {
     public function __invoke(EventChannel $newsChannel)

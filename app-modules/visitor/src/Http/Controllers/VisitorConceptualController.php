@@ -18,12 +18,12 @@ class VisitorConceptualController extends Controller
             new ConcreteComponentB(),
         ];
 
-        echo "The client code works with all visitors via the base Visitor interface:<br>";
+        echo 'The client code works with all visitors via the base Visitor interface:<br>';
         $visitor1 = new ConcreteVisitor1();
         $this->clientCode($components, $visitor1);
-        echo "<br>";
+        echo '<br>';
 
-        echo "It allows the same client code to work with different types of visitors:<br>";
+        echo 'It allows the same client code to work with different types of visitors:<br>';
         $visitor2 = new ConcreteVisitor2();
         $this->clientCode($components, $visitor2);
     }

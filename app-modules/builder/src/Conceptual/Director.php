@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Builder\Conceptual;
+
 use Modules\Builder\Conceptual\Contracts\Builder;
 
 final class Director

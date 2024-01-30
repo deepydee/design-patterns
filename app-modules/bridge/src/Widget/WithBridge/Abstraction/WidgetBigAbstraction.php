@@ -32,7 +32,7 @@ class WidgetBigAbstraction extends WidgetAbstract
     private function getFullTitle(): string
     {
         return $this->getRealization()->getId()
-            . '::::'
-            . $this->getRealization()->getTitle();
+            .'::::'
+            .$this->getRealization()->getTitle();
     }
 }

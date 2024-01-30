@@ -34,7 +34,7 @@ FORM;
 
         // ...
 
-        echo "Done!<br>";
+        echo 'Done!<br>';
 
         return true;
     }

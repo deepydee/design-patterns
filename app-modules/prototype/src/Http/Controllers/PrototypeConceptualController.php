@@ -3,7 +3,6 @@
 namespace Modules\Prototype\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\Prototype\Conceptual\ComponentWithBackReference;
 use Modules\Prototype\Conceptual\Prototype;
 
@@ -30,27 +29,27 @@ class PrototypeConceptualController extends Controller
         $p2 = clone $p1;
 
         if ($p1->primitive === $p2->primitive) {
-            echo "Primitive field values have been carried over to a clone. Yay!<br>";
+            echo 'Primitive field values have been carried over to a clone. Yay!<br>';
         } else {
-            echo "Primitive field values have not been copied. Booo!<br>";
+            echo 'Primitive field values have not been copied. Booo!<br>';
         }
 
         if ($p1->component === $p2->component) {
-            echo "Simple component has not been cloned. Booo!<br>";
+            echo 'Simple component has not been cloned. Booo!<br>';
         } else {
-            echo "Simple component has been cloned. Yay!<br>";
+            echo 'Simple component has been cloned. Yay!<br>';
         }
 
         if ($p1->circularReference === $p2->circularReference) {
-            echo "Component with back reference has not been cloned. Booo!<br>";
+            echo 'Component with back reference has not been cloned. Booo!<br>';
         } else {
-            echo "Component with back reference has been cloned. Yay!<br>";
+            echo 'Component with back reference has been cloned. Yay!<br>';
         }
 
         if ($p1->circularReference->prototype === $p2->circularReference->prototype) {
-            echo "Component with back reference is linked to original object. Booo!<br>";
+            echo 'Component with back reference is linked to original object. Booo!<br>';
         } else {
-            echo "Component with back reference is linked to the clone. Yay!<br>";
+            echo 'Component with back reference is linked to the clone. Yay!<br>';
         }
     }
 }

@@ -29,7 +29,7 @@ class Page
 
         return $renderer->render($pageTemplate->getTemplateString(), [
             'title' => $this->title,
-            'content' => $this->content
+            'content' => $this->content,
         ]);
     }
 }

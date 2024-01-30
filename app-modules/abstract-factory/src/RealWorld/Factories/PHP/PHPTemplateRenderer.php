@@ -19,7 +19,7 @@ final class PHPTemplateRenderer implements TemplateRenderer
         extract($arguments);
 
         ob_start();
-        eval(' ?>' . $templateString . '<?php ');
+        eval(' ?>'.$templateString.'<?php ');
         $result = ob_get_contents();
         ob_end_clean();
 

@@ -3,7 +3,6 @@
 namespace Modules\Singleton\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\Singleton\RealWorld\Config;
 use Modules\Singleton\RealWorld\Logger;
 
@@ -39,6 +38,7 @@ class SingletonRealWorldController extends Controller
 
         /**
          * Проверяем, как одиночка-Конфигурация сохраняет данные...
+         *
          * @var Config $config1
          */
         $config1 = Config::getInstance();
@@ -51,6 +51,7 @@ class SingletonRealWorldController extends Controller
 
         /**
          * ...и восстанавливает их.
+         *
          * @var Config $config2
          */
         $config2 = Config::getInstance();

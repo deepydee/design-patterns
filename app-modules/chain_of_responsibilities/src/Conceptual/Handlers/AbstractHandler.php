@@ -13,6 +13,7 @@ abstract class AbstractHandler implements Handler
     public function setNext(Handler $handler): Handler
     {
         $this->nextHandler = $handler;
+
         // Возврат обработчика отсюда позволит связать обработчики простым
         // способом, вот так:
         // $monkey->setNext($squirrel)->setNext($dog);
@@ -28,4 +29,3 @@ abstract class AbstractHandler implements Handler
         return null;
     }
 }
-

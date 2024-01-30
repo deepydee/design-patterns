@@ -19,7 +19,6 @@ use Modules\FactoryMethod\RealWorld\SocialNetworkPoster;
  * всё это без привязки клиентского кода к определённым классам конкретной
  * социальной сети.
  */
-
 class SocialPosterController extends Controller
 {
     /**
@@ -29,12 +28,12 @@ class SocialPosterController extends Controller
      */
     public function index(): void
     {
-        echo "Testing ConcreteCreator1:<br>";
-        $this->clientCode(new FacebookPoster("john_smith", "******"));
-        echo "<br><br>";
+        echo 'Testing ConcreteCreator1:<br>';
+        $this->clientCode(new FacebookPoster('john_smith', '******'));
+        echo '<br><br>';
 
-        echo "Testing ConcreteCreator2:<br>";
-        $this->clientCode(new LinkedInPoster("john_smith@example.com", "******"));
+        echo 'Testing ConcreteCreator2:<br>';
+        $this->clientCode(new LinkedInPoster('john_smith@example.com', '******'));
     }
 
     /**
@@ -44,8 +43,8 @@ class SocialPosterController extends Controller
     private function clientCode(SocialNetworkPoster $creator)
     {
         // ...
-        $creator->post("Hello world!");
-        $creator->post("I had a large hamburger this morning!");
+        $creator->post('Hello world!');
+        $creator->post('I had a large hamburger this morning!');
         // ...
     }
 }

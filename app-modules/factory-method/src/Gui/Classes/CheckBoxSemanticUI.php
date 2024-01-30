@@ -10,6 +10,6 @@ class CheckBoxSemanticUI implements CheckBox
 {
     public function draw(): void
     {
-        echo __CLASS__ . ' (CheckBox SemanticUI) <br>';
+        echo __CLASS__.' (CheckBox SemanticUI) <br>';
     }
 }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Builder\BlogPost;
 
-use Modules\Builder\BlogPost\BlogPost;
 use Modules\Builder\BlogPost\Contracts\BlogPostBuilder as ContractsBlogPostBuilder;
 
 class BlogPostBuilder implements ContractsBlogPostBuilder

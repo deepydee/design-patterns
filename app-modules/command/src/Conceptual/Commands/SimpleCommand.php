@@ -17,6 +17,6 @@ class SimpleCommand implements Command
 
     public function execute(): void
     {
-        echo "SimpleCommand: See, I can do simple things like printing (" . $this->payload . ")<br>";
+        echo 'SimpleCommand: See, I can do simple things like printing ('.$this->payload.')<br>';
     }
 }

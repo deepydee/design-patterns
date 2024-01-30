@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace  Modules\AbstractFactory\Conceptual\Contracts;
-
-use Modules\AbstractFactory\Conceptual\Contracts\AbstractProductA;
+namespace Modules\AbstractFactory\Conceptual\Contracts;
 
 /**
  * Базовый интерфейс другого продукта. Все продукты могут взаимодействовать друг

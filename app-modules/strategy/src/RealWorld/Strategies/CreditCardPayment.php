@@ -13,11 +13,11 @@ use Modules\Strategy\RealWorld\Order;
  */
 final class CreditCardPayment implements PaymentMethod
 {
-    static private $store_secret_key = "swordfish";
+    private static $store_secret_key = 'swordfish';
 
     public function getPaymentForm(Order $order): string
     {
-        $returnURL = "https://our-website.com/" .
+        $returnURL = 'https://our-website.com/'.
             "order/{$order->id}/payment/cc/return";
 
         return <<<FORM
@@ -36,20 +36,20 @@ FORM;
 
     public function validateReturn(Order $order, array $data): bool
     {
-        echo "CreditCardPayment: ...validating... ";
+        echo 'CreditCardPayment: ...validating... ';
 
-        if ($data['key'] != md5($order->id . static::$store_secret_key)) {
-            throw new \Exception("Payment key is wrong.");
+        if ($data['key'] != md5($order->id.self::$store_secret_key)) {
+            throw new \Exception('Payment key is wrong.');
         }
 
-        if (!isset($data['success']) || !$data['success'] || $data['success'] == 'false') {
-            throw new \Exception("Payment failed.");
+        if (! isset($data['success']) || ! $data['success'] || $data['success'] == 'false') {
+            throw new \Exception('Payment failed.');
         }
 
         // ...
 
         if (floatval($data['total']) < $order->total) {
-            throw new \Exception("Payment amount is wrong.");
+            throw new \Exception('Payment amount is wrong.');
         }
 
         echo "Done!\n";

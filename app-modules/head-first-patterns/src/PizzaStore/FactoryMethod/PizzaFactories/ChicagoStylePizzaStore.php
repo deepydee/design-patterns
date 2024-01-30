@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories;
 
-use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Contracts\Pizza;
-use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\Pizza as AbstractPizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Enums\PizzaType;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\ChicagoStyle\ChicagoStyleCheesePizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\ChicagoStyle\ChicagoStyleClamPizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\ChicagoStyle\ChicagoStylePepperoniPizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\ChicagoStyle\ChicagoStyleVeggiePizza;
+use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\Pizzas\Pizza as AbstractPizza;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaStore;
 
 class ChicagoStylePizzaStore extends PizzaStore

@@ -11,14 +11,14 @@ class ObserverRealWorldController extends Controller
 {
     public function __invoke(UserRepository $userRepository)
     {
-        $userRepository->attach(new Logger(__DIR__ . "/log.txt"), "*");
-        $userRepository->attach(new OnboardingNotification("1@example.com"), "users:created");
+        $userRepository->attach(new Logger(__DIR__.'/log.txt'), '*');
+        $userRepository->attach(new OnboardingNotification('1@example.com'), 'users:created');
 
-        $userRepository->initialize(storage_path('app') . '/users.csv');
+        $userRepository->initialize(storage_path('app').'/users.csv');
 
         $user = $userRepository->createUser([
-            "name" => "John Smith",
-            "email" => "john99@example.com",
+            'name' => 'John Smith',
+            'email' => 'john99@example.com',
         ]);
 
         $userRepository->deleteUser($user);

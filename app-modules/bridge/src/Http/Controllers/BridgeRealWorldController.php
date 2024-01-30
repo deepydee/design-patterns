@@ -35,18 +35,18 @@ class BridgeRealWorldController extends Controller
         $JSONRenderer = new JsonRenderer();
 
         $page = new SimplePage(renderer: $HTMLRenderer, title: 'Home', content: 'Welcome to our website!');
-        echo "HTML view of a simple content page:<br>";
+        echo 'HTML view of a simple content page:<br>';
         $this->clientCode($page);
-        echo "<br><br>";
+        echo '<br><br>';
 
         /**
          * При необходимости Абстракция может заменить связанную Реализацию во время
          * выполнения.
          */
         $page->changeRenderer($JSONRenderer);
-        echo "JSON view of a simple content page, rendered with the same client code:<br>";
+        echo 'JSON view of a simple content page, rendered with the same client code:<br>';
         $this->clientCode($page);
-        echo "<br><br>";
+        echo '<br><br>';
 
         $product = new Product(
             id: '123',
@@ -57,12 +57,12 @@ class BridgeRealWorldController extends Controller
         );
 
         $page = new ProductPage($HTMLRenderer, $product);
-        echo "HTML view of a product page, same client code:<br>";
+        echo 'HTML view of a product page, same client code:<br>';
         $this->clientCode($page);
-        echo "<br><br>";
+        echo '<br><br>';
 
         $page->changeRenderer($JSONRenderer);
-        echo "JSON view of a simple content page, with the same client code:<br>";
+        echo 'JSON view of a simple content page, with the same client code:<br>';
         $this->clientCode($page);
     }
 

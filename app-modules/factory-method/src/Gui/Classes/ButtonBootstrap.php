@@ -10,6 +10,6 @@ class ButtonBootstrap implements Button
 {
     public function draw(): void
     {
-        echo __CLASS__ . ' (Button Bootstrap) <br>';
+        echo __CLASS__.' (Button Bootstrap) <br>';
     }
 }

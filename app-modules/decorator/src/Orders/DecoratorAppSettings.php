@@ -34,7 +34,7 @@ class DecoratorAppSettings
         $updateOrderObj = new OrderUpdate();
 
         $settings->each(
-            function($setting) use (&$updateOrderObj) {
+            function ($setting) use (&$updateOrderObj) {
                 $className = $setting['decorator_class'];
 
                 $updateOrderObj = (new $className($updateOrderObj));

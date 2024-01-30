@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Composite\OrderTotal\Classes;
 
+use Illuminate\Support\Arr;
 use Modules\Composite\OrderTotal\Models\Ingredient;
 use Modules\Composite\OrderTotal\Models\Order;
 use Modules\Composite\OrderTotal\Models\Product;
-use Illuminate\Support\Arr;
 
 class ObjectsFactory
 {

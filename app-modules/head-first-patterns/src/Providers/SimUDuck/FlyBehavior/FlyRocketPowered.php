@@ -10,6 +10,6 @@ final class FlyRocketPowered implements FlyBehavior
 {
     public function fly(): void
     {
-        echo "I’m flying with a rocket!<br>";
+        echo 'I’m flying with a rocket!<br>';
     }
 }

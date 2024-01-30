@@ -21,7 +21,7 @@ class PaymentFactory
      */
     public static function getPaymentMethod(string $id): PaymentMethod
     {
-        return match($id) {
+        return match ($id) {
             'cc' => new CreditCardPayment(),
             'paypal' => new PayPalPayment(),
             default => throw new \Exception('Unknown Payment Method'),

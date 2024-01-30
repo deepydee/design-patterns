@@ -18,7 +18,7 @@ class WidgetMiddleCategory extends WidgetAbstract
     private function getRealizationLogic(Category $category): array
     {
         $id = $category->id;
-        $fullTitle = $category->id . '->' . $category->title;
+        $fullTitle = $category->id.'->'.$category->title;
         $description = $category->description;
 
         return compact('id', 'fullTitle', 'description');

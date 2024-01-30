@@ -10,5 +10,6 @@ interface Subscriber
      * Уведомление подписчика
      */
     public function notify(string $data): void;
+
     public function getName(): string;
 }

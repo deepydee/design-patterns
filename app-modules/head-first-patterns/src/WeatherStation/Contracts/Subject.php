@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\HeadFirstPatterns\WeatherStation\Contracts;
 
-use Modules\HeadFirstPatterns\WeatherStation\Contracts\Observer;
-
 interface Subject
 {
     public function registerObserver(Observer $observer): void;
+
     public function removeObserver(Observer $observer): void;
 
     /**
@@ -18,6 +17,8 @@ interface Subject
     public function notifyObservers(): void;
 
     public function getTemperature(): float;
+
     public function getHumidity(): float;
+
     public function getPressure(): float;
 }

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Flyweight\RealWorld;
 
-use Modules\Flyweight\RealWorld\CatVariation;
-
 /**
  * Контекст хранит данные, уникальные для каждой кошки.
  *
@@ -32,11 +30,11 @@ readonly class Cat
     {
         foreach ($query as $key => $value) {
             if (property_exists($this, $key)) {
-                if ($this->$key !== $value) {
+                if ($value !== $this->$key) {
                     return false;
                 }
             } elseif (property_exists($this->variation, $key)) {
-                if ($this->variation->$key !== $value) {
+                if ($value !== $this->variation->$key) {
                     return false;
                 }
             } else {

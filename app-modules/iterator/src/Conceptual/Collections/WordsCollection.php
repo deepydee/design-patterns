@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Iterator\Conceptual\Collections;
+
 use Modules\Iterator\Conceptual\Iterators\AlphabeticalOrderIterator;
 
 /**

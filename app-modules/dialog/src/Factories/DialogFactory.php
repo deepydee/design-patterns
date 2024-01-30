@@ -14,7 +14,7 @@ final class DialogFactory
 {
     public static function instance(OS $os): Dialog
     {
-        return match($os) {
+        return match ($os) {
             OS::Web => new WebDialog(),
             OS::Windows => new WindowDialog(),
             default => throw new OsNotFoundException(),

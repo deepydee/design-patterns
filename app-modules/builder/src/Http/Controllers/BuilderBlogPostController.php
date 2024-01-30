@@ -7,10 +7,6 @@ namespace Modules\Builder\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Modules\Builder\BlogPost\BlogPostBuilder;
 use Modules\Builder\BlogPost\BlogPostManager;
-use Modules\Builder\RealWorld\Builders\MySQL\MysqlQueryBuilder;
-use Modules\Builder\RealWorld\Builders\PostgreSQL\PostgresQueryBuilder;
-use Modules\Builder\RealWorld\Contracts\SQLQueryBuilder;
-
 
 class BuilderBlogPostController extends Controller
 {

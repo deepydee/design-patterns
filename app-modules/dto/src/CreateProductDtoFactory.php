@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Dto;
 
 use Illuminate\Http\Request;
-use Modules\Dto\ProductDto;
 
 final readonly class CreateProductDtoFactory
 {

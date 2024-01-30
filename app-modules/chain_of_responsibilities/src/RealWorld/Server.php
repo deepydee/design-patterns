@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\ChainOfResponsibilities\RealWorld;
 
-use Modules\ChainOfResponsibilities\RealWorld\Middleware;
-
 /**
  * Это класс приложения, который осуществляет реальную обработку запроса. Класс
  * Сервер использует паттерн CoR для выполнения набора различных промежуточных
@@ -32,7 +30,7 @@ class Server
     public function logIn(string $email, string $password): bool
     {
         if ($this->middleware->check($email, $password)) {
-            echo "Server: Authorization has been successful!<br>";
+            echo 'Server: Authorization has been successful!<br>';
 
             // Выполняем что-нибудь полезное для авторизованных пользователей.
 

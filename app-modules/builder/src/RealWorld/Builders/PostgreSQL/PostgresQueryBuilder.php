@@ -16,13 +16,13 @@ use Modules\Builder\RealWorld\Contracts\SQLQueryBuilder;
 final class PostgresQueryBuilder extends MysqlQueryBuilder
 {
     /**
-         * Помимо прочего, PostgreSQL имеет несколько иной синтаксис LIMIT.
-         */
+     * Помимо прочего, PostgreSQL имеет несколько иной синтаксис LIMIT.
+     */
     public function limit(int $start, int $offset): SQLQueryBuilder
     {
         parent::limit($start, $offset);
 
-        $this->query->limit = " LIMIT " . $start . " OFFSET " . $offset;
+        $this->query->limit = ' LIMIT '.$start.' OFFSET '.$offset;
 
         return $this;
     }

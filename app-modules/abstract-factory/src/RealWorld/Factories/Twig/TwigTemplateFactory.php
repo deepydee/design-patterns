@@ -8,9 +8,6 @@ use Modules\AbstractFactory\RealWorld\Contracts\PageTemplate;
 use Modules\AbstractFactory\RealWorld\Contracts\TemplateFactory;
 use Modules\AbstractFactory\RealWorld\Contracts\TemplateRenderer;
 use Modules\AbstractFactory\RealWorld\Contracts\TitleTemplate;
-use Modules\AbstractFactory\RealWorld\Factories\Twig\TwigPageTemplate;
-use Modules\AbstractFactory\RealWorld\Factories\Twig\TwigRenderer;
-use Modules\AbstractFactory\RealWorld\Factories\Twig\TwigTitleTemplate;
 
 final class TwigTemplateFactory implements TemplateFactory
 {

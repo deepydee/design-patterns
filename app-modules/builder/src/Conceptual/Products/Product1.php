@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Builder\Conceptual\Products;
+
 /**
  * Имеет смысл использовать паттерн Строитель только тогда, когда ваши продукты
  * достаточно сложны и требуют обширной конфигурации.
@@ -17,6 +18,6 @@ final class Product1
 
     public function listParts(): void
     {
-        echo "Product parts: " . implode(', ', $this->parts) . "<br>";
+        echo 'Product parts: '.implode(', ', $this->parts).'<br>';
     }
 }

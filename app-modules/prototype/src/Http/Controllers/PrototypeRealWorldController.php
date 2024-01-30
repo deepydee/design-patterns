@@ -3,7 +3,6 @@
 namespace Modules\Prototype\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\Prototype\RealWorld\Author;
 use Modules\Prototype\RealWorld\Page;
 
@@ -43,7 +42,7 @@ class PrototypeRealWorldController extends Controller
         // ...
 
         $draft = clone $page;
-        echo "Dump of the clone. Note that the author is now referencing two objects.<br>";
+        echo 'Dump of the clone. Note that the author is now referencing two objects.<br>';
 
         echo '<pre>';
         print_r($draft);

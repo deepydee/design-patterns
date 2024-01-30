@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\ChainOfResponsibilities\RealWorld;
 
-use Modules\ChainOfResponsibilities\RealWorld\Server;
-
 /**
  * Это Конкретное Middleware проверяет, существует ли пользователь с указанными
  * учётными данными.

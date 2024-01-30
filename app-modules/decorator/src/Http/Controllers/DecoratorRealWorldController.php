@@ -50,17 +50,17 @@ HERE;
          * Наивное отображение комментариев (небезопасное).
          */
         $naiveInput = new TextInput();
-        echo "Website renders comments without filtering (unsafe):<br>";
+        echo 'Website renders comments without filtering (unsafe):<br>';
         $this->displayCommentAsAWebsite($naiveInput, $dangerousComment);
-        echo "<br><br><br>";
+        echo '<br><br><br>';
 
         /**
          * Отфильтрованное отображение комментариев (безопасное).
          */
         $filteredInput = new PlainTextFilter($naiveInput);
-        echo "Website renders comments after stripping all tags (safe):<br>";
+        echo 'Website renders comments after stripping all tags (safe):<br>';
         $this->displayCommentAsAWebsite($filteredInput, $dangerousComment);
-        echo "<br><br><br>";
+        echo '<br><br><br>';
 
         /**
          * Декоратор позволяет складывать несколько входных форматов для получения
@@ -80,9 +80,9 @@ HERE;
          * Наивное отображение сообщений (небезопасное, без форматирования).
          */
         $naiveInput = new TextInput();
-        echo "Website renders a forum post without filtering and formatting (unsafe, ugly):<br>";
+        echo 'Website renders a forum post without filtering and formatting (unsafe, ugly):<br>';
         $this->displayCommentAsAWebsite($naiveInput, $dangerousForumPost);
-        echo "<br><br><br>";
+        echo '<br><br><br>';
 
         /**
          * Форматтер Markdown + фильтрация опасных тегов (безопасно, красиво).
@@ -91,9 +91,9 @@ HERE;
         $markdown = new MarkdownFormat($text);
         $filteredInput = new DangerousHTMLTagsFilter($markdown);
         echo 'Website renders a forum post after translating markdown markup'.
-            " and filtering some dangerous HTML tags and attributes (safe, pretty):<br>";
+            ' and filtering some dangerous HTML tags and attributes (safe, pretty):<br>';
         $this->displayCommentAsAWebsite($filteredInput, $dangerousForumPost);
-        echo "<br><br><br>";
+        echo '<br><br><br>';
     }
 
     /**

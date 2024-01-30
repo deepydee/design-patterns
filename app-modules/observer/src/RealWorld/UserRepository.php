@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Observer\RealWorld;
-use Modules\Observer\RealWorld\User;
 
 /**
  * Пользовательский репозиторий представляет собой Издателя. Различные объекты
@@ -37,23 +36,23 @@ class UserRepository implements \SplSubject
         }
     }
 
-    private function getEventObservers(string $event = "*"): array
+    private function getEventObservers(string $event = '*'): array
     {
         $this->initEventGroup($event);
         $group = $this->observers[$event];
-        $all = $this->observers["*"];
+        $all = $this->observers['*'];
 
         return array_merge($group, $all);
     }
 
-    public function attach(\SplObserver $observer, string $event = "*"): void
+    public function attach(\SplObserver $observer, string $event = '*'): void
     {
         $this->initEventGroup($event);
 
         $this->observers[$event][] = $observer;
     }
 
-    public function detach(\SplObserver $observer, string $event = "*"): void
+    public function detach(\SplObserver $observer, string $event = '*'): void
     {
         foreach ($this->getEventObservers($event) as $key => $s) {
             if ($s === $observer) {
@@ -62,7 +61,7 @@ class UserRepository implements \SplSubject
         }
     }
 
-    public function notify(string $event = "*", $data = null): void
+    public function notify(string $event = '*', $data = null): void
     {
         echo "UserRepository: Broadcasting the '$event' event.<br>";
 
@@ -75,55 +74,55 @@ class UserRepository implements \SplSubject
 
     public function initialize(string $filename): void
     {
-        echo "UserRepository: Loading user records from a file.<br>";
+        echo 'UserRepository: Loading user records from a file.<br>';
         // ...
-        $this->notify("users:init", $filename);
+        $this->notify('users:init', $filename);
     }
 
     public function createUser(array $data): User
     {
-        echo "UserRepository: Creating a user.<br>";
+        echo 'UserRepository: Creating a user.<br>';
 
         $user = new User();
         $user->update($data);
 
         $id = bin2hex(openssl_random_pseudo_bytes(16));
-        $user->update(["id" => $id]);
+        $user->update(['id' => $id]);
         $this->users[$id] = $user;
 
-        $this->notify("users:created", $user);
+        $this->notify('users:created', $user);
 
         return $user;
     }
 
     public function updateUser(User $user, array $data): ?User
     {
-        echo "UserRepository: Updating a user.<br>";
+        echo 'UserRepository: Updating a user.<br>';
 
-        $id = $user->attributes["id"];
-        if (!isset($this->users[$id])) {
+        $id = $user->attributes['id'];
+        if (! isset($this->users[$id])) {
             return null;
         }
 
         $user = $this->users[$id];
         $user->update($data);
 
-        $this->notify("users:updated", $user);
+        $this->notify('users:updated', $user);
 
         return $user;
     }
 
     public function deleteUser(User $user): void
     {
-        echo "UserRepository: Deleting a user.<br>";
+        echo 'UserRepository: Deleting a user.<br>';
 
-        $id = $user->attributes["id"];
-        if (!isset($this->users[$id])) {
+        $id = $user->attributes['id'];
+        if (! isset($this->users[$id])) {
             return;
         }
 
         unset($this->users[$id]);
 
-        $this->notify("users:deleted", $user);
+        $this->notify('users:deleted', $user);
     }
 }

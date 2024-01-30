@@ -8,10 +8,12 @@ use Modules\HeadFirstPatterns\WeatherStation\Contracts\DisplayElement;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Observer;
 use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
 
-final class CurrentConditionsDisplay implements Observer, DisplayElement
+final class CurrentConditionsDisplay implements DisplayElement, Observer
 {
     private float $temperature = 0.0;
+
     private float $humidity = 0.0;
+
     private Subject $weatherData;
 
     /**

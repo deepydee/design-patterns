@@ -9,7 +9,6 @@ use Modules\Decorator\Orders\Models\Order;
 
 final class OrderUpdate implements OrderUpdateInterface
 {
-
     public function run(Order $order, array $orderData): Order
     {
         echo 'Base update<br>';

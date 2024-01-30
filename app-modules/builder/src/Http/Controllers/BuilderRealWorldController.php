@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Builder\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\Builder\RealWorld\Builders\MySQL\MysqlQueryBuilder;
 use Modules\Builder\RealWorld\Builders\PostgreSQL\PostgresQueryBuilder;
 use Modules\Builder\RealWorld\Contracts\SQLQueryBuilder;
@@ -37,21 +36,21 @@ class BuilderRealWorldController extends Controller
         //
         // clientCode($builder);
 
-        echo "Testing MySQL query builder:<br>";
+        echo 'Testing MySQL query builder:<br>';
         $this->clientCode(new MysqlQueryBuilder());
 
-        echo "<br>";
+        echo '<br>';
 
-        echo "Testing PostgresSQL query builder:<br>";
+        echo 'Testing PostgresSQL query builder:<br>';
         $this->clientCode(new PostgresQueryBuilder());
     }
 
     private function clientCode(SQLQueryBuilder $queryBuilder): void
     {
         $query = $queryBuilder
-            ->select("users", ["name", "email", "password"])
-            ->where("age", 18, ">")
-            ->where("age", 30, "<")
+            ->select('users', ['name', 'email', 'password'])
+            ->where('age', 18, '>')
+            ->where('age', 30, '<')
             ->limit(10, 20)
             ->getSQL();
 

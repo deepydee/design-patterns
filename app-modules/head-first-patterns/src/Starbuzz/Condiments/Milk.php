@@ -17,7 +17,7 @@ class Whip extends CondimentDecorator
 
     public function getDescription(): string
     {
-        return $this->beverage->getDescription() . ', Milk';
+        return $this->beverage->getDescription().', Milk';
     }
 
     public function cost(): float
@@ -26,7 +26,7 @@ class Whip extends CondimentDecorator
             Size::TALL => 0.10,
             Size::GRANDE => 0.15,
             Size::VENTI => 0.20,
-            default => throw new \UnexpectedValueException('Unexpected value ' . $this->beverage->getSize()),
-        };;
+            default => throw new \UnexpectedValueException('Unexpected value '.$this->beverage->getSize()),
+        };
     }
 }

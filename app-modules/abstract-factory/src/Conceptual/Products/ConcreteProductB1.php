@@ -14,7 +14,7 @@ final class ConcreteProductB1 implements AbstractProductB
 {
     public function usefulFunctionB(): string
     {
-        return "The result of the product B1.";
+        return 'The result of the product B1.';
     }
 
     /**

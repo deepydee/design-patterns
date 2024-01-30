@@ -3,7 +3,6 @@
 namespace Modules\FactoryMethod\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Modules\FactoryMethod\Conceptual\ConcreteCreator1;
 use Modules\FactoryMethod\Conceptual\ConcreteCreator2;
 use Modules\FactoryMethod\Conceptual\Creator;
@@ -38,7 +37,7 @@ class FactoryConceptualController extends Controller
     {
         // ...
         echo "Client: I'm not aware of the creator's class, but it still works.\n"
-            . $creator->someOperation();
+            .$creator->someOperation();
         // ...
     }
 }

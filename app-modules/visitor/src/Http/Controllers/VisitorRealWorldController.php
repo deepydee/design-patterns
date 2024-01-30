@@ -34,11 +34,11 @@ class VisitorRealWorldController extends Controller
 
         $report = new SalaryReport();
 
-        echo "Client: I can print a report for a whole company:<br><br>";
+        echo 'Client: I can print a report for a whole company:<br><br>';
         echo $company->accept($report);
 
-        echo "<br>Client: ...or for different entities ".
-            "such as an employee, a department, or the whole company:<br><br>";
+        echo '<br>Client: ...or for different entities '.
+            'such as an employee, a department, or the whole company:<br><br>';
 
         $someEmployee = new Employee('Some employee', 'operator', 35000);
         $differentEntities = [$someEmployee, $techSupport, $company];

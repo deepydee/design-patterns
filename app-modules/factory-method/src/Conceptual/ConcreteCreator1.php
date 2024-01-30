@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\FactoryMethod\Conceptual;
 
 use Modules\FactoryMethod\Conceptual\Contracts\Product;
-use Modules\FactoryMethod\Conceptual\Creator;
 use Modules\FactoryMethod\Conceptual\Products\ConcreteProduct1;
 
 /**

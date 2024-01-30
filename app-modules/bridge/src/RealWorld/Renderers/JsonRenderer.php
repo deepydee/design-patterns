@@ -13,22 +13,22 @@ final class JsonRenderer implements Renderer
 {
     public function renderTitle(string $title): string
     {
-        return '"title": "' . $title . '"';
+        return '"title": "'.$title.'"';
     }
 
     public function renderTextBlock(string $text): string
     {
-        return '"text": "' . $text . '"';
+        return '"text": "'.$text.'"';
     }
 
     public function renderImage(string $url): string
     {
-        return '"img": "' . $url . '"';
+        return '"img": "'.$url.'"';
     }
 
     public function renderLink(string $url, string $title): string
     {
-        return '"link": {"href": "' . $url . '", "title": "' . $title . '"}';
+        return '"link": {"href": "'.$url.'", "title": "'.$title.'"}';
     }
 
     public function renderHeader(): string
@@ -43,6 +43,6 @@ final class JsonRenderer implements Renderer
 
     public function renderParts(array $parts): string
     {
-        return "{\n" . implode(",\n", array_filter($parts)) . "\n}";
+        return "{\n".implode(",\n", array_filter($parts))."\n}";
     }
 }

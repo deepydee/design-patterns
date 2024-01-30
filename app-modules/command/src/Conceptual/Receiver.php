@@ -13,11 +13,11 @@ class Receiver
 {
     public function doSomething(string $a): void
     {
-        echo "Receiver: Working on (" . $a . ".)<br>";
+        echo 'Receiver: Working on ('.$a.'.)<br>';
     }
 
     public function doSomethingElse(string $b): void
     {
-        echo "Receiver: Also working on (" . $b . ".)<br>";
+        echo 'Receiver: Also working on ('.$b.'.)<br>';
     }
 }

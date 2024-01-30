@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Mediator\RealWorld;
 
 use Modules\Mediator\RealWorld\Contracts\Observer;
-use Modules\Mediator\RealWorld\Events;
-use Modules\Mediator\RealWorld\User;
 
 /**
  * В отличие от нашего примера паттерна Наблюдатель, этот пример заставляет
@@ -55,14 +53,14 @@ class UserRepository implements Observer
 
     public function initialize(string $filename): void
     {
-        echo "UserRepository: Loading user records from a file.<br>";
+        echo 'UserRepository: Loading user records from a file.<br>';
         // ...
         Events::getDispatcher()->trigger('users:init', $this, $filename);
     }
 
     public function createUser(array $data, bool $silent = false): User
     {
-        echo "UserRepository: Creating a user.<br>";
+        echo 'UserRepository: Creating a user.<br>';
 
         $user = new User();
         $user->update($data);
@@ -80,7 +78,7 @@ class UserRepository implements Observer
 
     public function updateUser(User $user, array $data, bool $silent = false): ?User
     {
-        echo "UserRepository: Updating a user.<br>";
+        echo 'UserRepository: Updating a user.<br>';
 
         $id = $user->attributes['id'];
         if (! isset($this->users[$id])) {
@@ -99,7 +97,7 @@ class UserRepository implements Observer
 
     public function deleteUser(User $user, bool $silent = false): void
     {
-        echo "UserRepository: Deleting a user.<br>";
+        echo 'UserRepository: Deleting a user.<br>';
 
         $id = $user->attributes['id'];
         if (! isset($this->users[$id])) {

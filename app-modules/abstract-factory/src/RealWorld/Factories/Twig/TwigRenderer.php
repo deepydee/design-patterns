@@ -14,8 +14,8 @@ use Twig\Loader\ArrayLoader;
 final class TwigRenderer implements TemplateRenderer
 {
     private $loader;
-    private $twig;
 
+    private $twig;
 
     public function render(string $templateString, array $arguments = []): string
     {

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Prototype\RealWorld;
 
 use DateTime;
-use Modules\Prototype\RealWorld\Author;
 
 class Page
 {
@@ -38,7 +37,7 @@ class Page
      */
     public function __clone()
     {
-        $this->title = "Copy of " . $this->title;
+        $this->title = 'Copy of '.$this->title;
         $this->author->addToPage($this);
         $this->comments = [];
         $this->date = new DateTime();

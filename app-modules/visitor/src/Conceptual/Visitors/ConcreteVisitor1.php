@@ -21,11 +21,11 @@ class ConcreteVisitor1 implements Visitor
 {
     public function visitConcreteComponentA(ConcreteComponentA $element): void
     {
-        echo $element->exclusiveMethodOfConcreteComponentA() . " + ConcreteVisitor1<br>";
+        echo $element->exclusiveMethodOfConcreteComponentA().' + ConcreteVisitor1<br>';
     }
 
     public function visitConcreteComponentB(ConcreteComponentB $element): void
     {
-        echo $element->specialMethodOfConcreteComponentB() . " + ConcreteVisitor1<br>";
+        echo $element->specialMethodOfConcreteComponentB().' + ConcreteVisitor1<br>';
     }
 }

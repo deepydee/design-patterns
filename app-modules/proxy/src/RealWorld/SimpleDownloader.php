@@ -16,9 +16,9 @@ class SimpleDownloader implements Downloarer
 {
     public function download(string $url): string
     {
-        echo "Downloading a file from the Internet.<br>";
+        echo 'Downloading a file from the Internet.<br>';
         $result = file_get_contents($url);
-        echo "Downloaded bytes: " . strlen($result) . "<br>";
+        echo 'Downloaded bytes: '.strlen($result).'<br>';
 
         return $result;
     }

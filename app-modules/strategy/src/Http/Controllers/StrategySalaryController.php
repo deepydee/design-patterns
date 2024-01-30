@@ -7,7 +7,6 @@ use App\Models\User;
 use Illuminate\Support\Carbon;
 use Modules\Strategy\Salary\SalaryManager;
 
-
 /**
  * Паттерн Стратегия
  *

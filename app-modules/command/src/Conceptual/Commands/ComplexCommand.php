@@ -21,8 +21,7 @@ class ComplexCommand implements Command
         private Receiver $receiver,
         private string $a, // Данные о контексте, необходимые для запуска методов получателя.
         private string $b,
-    )
-    {
+    ) {
     }
 
     /**
@@ -30,7 +29,7 @@ class ComplexCommand implements Command
      */
     public function execute(): void
     {
-        echo "ComplexCommand: Complex stuff should be done by a receiver object.<br>";
+        echo 'ComplexCommand: Complex stuff should be done by a receiver object.<br>';
         $this->receiver->doSomething($this->a);
         $this->receiver->doSomethingElse($this->b);
     }

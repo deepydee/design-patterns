@@ -29,11 +29,11 @@ class ChainOfResponsibilitiesConceptualController extends Controller
          * Клиент должен иметь возможность отправлять запрос любому обработчику, а не
          * только первому в цепочке.
          */
-        echo "Chain: Monkey > Squirrel > Dog<br><br>";
+        echo 'Chain: Monkey > Squirrel > Dog<br><br>';
         $this->clientCode($monkey);
-        echo "<br>";
+        echo '<br>';
 
-        echo "Subchain: Squirrel > Dog<br><br>";
+        echo 'Subchain: Squirrel > Dog<br><br>';
         $this->clientCode($squirrel);
     }
 

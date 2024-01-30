@@ -13,16 +13,16 @@ class IteratorConceptualController extends Controller
         $collection->addItem('Second');
         $collection->addItem('Third');
 
-        echo "Straight traversal:<br>";
+        echo 'Straight traversal:<br>';
 
         foreach ($collection as $item) {
-            echo $item . '<br>';
+            echo $item.'<br>';
         }
 
-        echo "<br>Reverse traversal:<br>";
+        echo '<br>Reverse traversal:<br>';
 
         foreach ($collection->getReverseIterator() as $item) {
-            echo $item . '<br>';
+            echo $item.'<br>';
         }
     }
 }

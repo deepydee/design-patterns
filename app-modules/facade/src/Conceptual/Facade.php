@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Facade\Conceptual;
 
-use Modules\Facade\Conceptual\Subsystem1;
-use Modules\Facade\Conceptual\Subsystem2;
-
 /**
  * Класс Фасада предоставляет простой интерфейс для сложной логики одной или
  * нескольких подсистем. Фасад делегирует запросы клиентов соответствующим
@@ -24,7 +21,7 @@ class Facade
      * Фасаду существующие объекты подсистемы или заставить Фасад создать их
      * самостоятельно.
      */
-    public function __construct(Subsystem1 $subsystem1 = null, Subsystem2 $subsystem2 = null)
+    public function __construct(?Subsystem1 $subsystem1 = null, ?Subsystem2 $subsystem2 = null)
     {
         $this->subsystem1 = $subsystem1 ?: new Subsystem1();
         $this->subsystem2 = $subsystem2 ?: new Subsystem2();

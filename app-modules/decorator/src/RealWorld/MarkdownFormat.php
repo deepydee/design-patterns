@@ -22,7 +22,8 @@ final class MarkdownFormat extends TextFormat
             if (preg_match('|^#+|', $chunk)) {
                 $chunk = preg_replace_callback('|^(#+)(.*?)$|', function ($matches) {
                     $h = strlen($matches[1]);
-                    return "<h$h>" . trim($matches[2]) . "</h$h>";
+
+                    return "<h$h>".trim($matches[2])."</h$h>";
                 }, $chunk);
             } // Форматирование параграфов.
             else {
@@ -33,9 +34,9 @@ final class MarkdownFormat extends TextFormat
         $text = implode("\n\n", $chunks);
 
         // Форматирование встроенных элементов.
-        $text = preg_replace("|__(.*?)__|", '<strong>$1</strong>', $text);
+        $text = preg_replace('|__(.*?)__|', '<strong>$1</strong>', $text);
         $text = preg_replace("|\*\*(.*?)\*\*|", '<strong>$1</strong>', $text);
-        $text = preg_replace("|_(.*?)_|", '<em>$1</em>', $text);
+        $text = preg_replace('|_(.*?)_|', '<em>$1</em>', $text);
         $text = preg_replace("|\*(.*?)\*|", '<em>$1</em>', $text);
 
         return $text;

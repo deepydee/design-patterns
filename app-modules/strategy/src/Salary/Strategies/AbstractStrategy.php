@@ -7,7 +7,7 @@ namespace Modules\Strategy\Salary\Strategies;
 use App\Models\User;
 use Modules\Strategy\Salary\Contracts\SalaryStrategyInterface;
 
-abstract class AbstractStrategy  implements SalaryStrategyInterface
+abstract class AbstractStrategy implements SalaryStrategyInterface
 {
     public function calculate(array $period, User $user): int
     {

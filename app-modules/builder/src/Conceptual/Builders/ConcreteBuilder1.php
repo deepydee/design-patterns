@@ -35,17 +35,17 @@ final class ConcreteBuilder1 implements Builder
      */
     public function producePartA(): void
     {
-        $this->product->parts[] = "PartA1";
+        $this->product->parts[] = 'PartA1';
     }
 
     public function producePartB(): void
     {
-        $this->product->parts[] = "PartB1";
+        $this->product->parts[] = 'PartB1';
     }
 
     public function producePartC(): void
     {
-        $this->product->parts[] = "PartC1";
+        $this->product->parts[] = 'PartC1';
     }
 
     /**

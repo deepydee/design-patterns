@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Composite\OrderTotal\Models;
 
-use Modules\Composite\OrderTotal\Contracts\CompositeItem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+use Modules\Composite\OrderTotal\Contracts\CompositeItem;
 
 class Ingredient extends Model implements CompositeItem
 {

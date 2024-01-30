@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace  Modules\AbstractFactory\Conceptual\Contracts;
+namespace Modules\AbstractFactory\Conceptual\Contracts;
 
 /**
  * Каждый отдельный продукт семейства продуктов должен иметь базовый интерфейс.

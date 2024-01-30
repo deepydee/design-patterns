@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Facade\ReallWorld;
 
-use Modules\Facade\ReallWorld\YouTube;
-
 /**
  * Фасад предоставляет единый метод загрузки видео с YouTube. Этот метод
  * скрывает всю сложность сетевого уровня PHP, API YouTube и библиотеки
@@ -34,27 +32,27 @@ class YouTubeDownloader
      */
     public function downloadVideo(string $url): void
     {
-        echo "Fetching video metadata from youtube...<br>";
+        echo 'Fetching video metadata from youtube...<br>';
         // $title = $this->youtube->fetchVideo($url)->getTitle();
-        echo "Saving video file to a temporary file...<br>";
+        echo 'Saving video file to a temporary file...<br>';
         // $this->youtube->saveAs($url, "video.mpg");
 
-        echo "Processing source video...<br>";
+        echo 'Processing source video...<br>';
         // $video = $this->ffmpeg->open('video.mpg');
-        echo "Normalizing and resizing the video to smaller dimensions...<br>";
+        echo 'Normalizing and resizing the video to smaller dimensions...<br>';
         // $video
         //     ->filters()
         //     ->resize(new FFMpeg\Coordinate\Dimension(320, 240))
         //     ->synchronize();
-        echo "Capturing preview image...<br>";
+        echo 'Capturing preview image...<br>';
         // $video
         //     ->frame(FFMpeg\Coordinate\TimeCode::fromSeconds(10))
         //     ->save($title . 'frame.jpg');
-        echo "Saving video in target formats...<br>";
+        echo 'Saving video in target formats...<br>';
         // $video
         //     ->save(new FFMpeg\Format\Video\X264(), $title . '.mp4')
         //     ->save(new FFMpeg\Format\Video\WMV(), $title . '.wmv')
         //     ->save(new FFMpeg\Format\Video\WebM(), $title . '.webm');
-        echo "Done!<br>";
+        echo 'Done!<br>';
     }
 }

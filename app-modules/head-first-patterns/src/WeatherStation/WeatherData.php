@@ -11,6 +11,7 @@ use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
  * @property-read float $temperature
  * @property-read float $humidity
  * @property-read float $pressure
+ *
  * @method float getTemperature()
  * @method float getHumidity()
  * @method float getPressure()
@@ -18,7 +19,9 @@ use Modules\HeadFirstPatterns\WeatherStation\Contracts\Subject;
 class WeatherData implements Subject
 {
     private float $temperature = 0.0;
+
     private float $humidity = 0.0;
+
     private float $pressure = 0.0;
 
     public function __construct(private array $observers = [])

@@ -23,6 +23,6 @@ class OnboardingNotification implements Observer
         //     "Onboarding required",
         //     "We have a new user. Here's his info: " .json_encode($data));
 
-        echo "OnboardingNotification: The notification has been emailed!<br>";
+        echo 'OnboardingNotification: The notification has been emailed!<br>';
     }
 }

@@ -23,7 +23,7 @@ class TemplateMethodRealWorldController extends Controller
         } elseif ($choice == 2) {
             $network = new Twitter($username, $password);
         } else {
-            die("Sorry, I'm not sure what you mean by that.<br>");
+            exit("Sorry, I'm not sure what you mean by that.<br>");
         }
 
         $network->post($message);

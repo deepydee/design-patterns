@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\State\Conceptual;
 
-use Modules\State\Conceptual\Context;
-
 /**
  * Базовый класс Состояния объявляет методы, которые должны реализовать все
  * Конкретные Состояния, а также предоставляет обратную ссылку на объект

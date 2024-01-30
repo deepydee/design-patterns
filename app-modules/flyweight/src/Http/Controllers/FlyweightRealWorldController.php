@@ -62,6 +62,7 @@ class FlyweightRealWorldController extends Controller
                     $columns[$columnKey] = $columnIndex;
                 }
                 $row++;
+
                 continue;
             }
 

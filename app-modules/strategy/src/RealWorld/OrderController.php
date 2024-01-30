@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Strategy\RealWorld;
 
 use Modules\Strategy\RealWorld\Contracts\PaymentMethod;
-use Modules\Strategy\RealWorld\Order;
-use Modules\Strategy\RealWorld\PaymentFactory;
 
 /**
  * Это роутер и контроллер нашего приложения. Получив запрос, этот класс решает,
@@ -65,7 +63,7 @@ class OrderController
                 $this->getPaymentReturn($paymentMethod, $order, $data);
             }
         } else {
-            echo "Controller: 404 page<br>";
+            echo 'Controller: 404 page<br>';
         }
     }
 
@@ -85,7 +83,7 @@ class OrderController
     {
         echo "Controller: Here's all orders:<br>";
         foreach (Order::get() as $order) {
-            echo json_encode($order, JSON_PRETTY_PRINT) . "<br>";
+            echo json_encode($order, JSON_PRETTY_PRINT).'<br>';
         }
     }
 
@@ -97,7 +95,7 @@ class OrderController
         // Фактическая работа делегируется объекту метода оплаты.
         $form = $method->getPaymentForm($order);
         echo "Controller: here's the payment form:<br>";
-        echo $form . "<br>";
+        echo $form.'<br>';
     }
 
     /**
@@ -108,11 +106,11 @@ class OrderController
         try {
             // Другой тип работы, делегированный методу оплаты.
             if ($method->validateReturn($order, $data)) {
-                echo "Controller: Thanks for your order!<br>";
+                echo 'Controller: Thanks for your order!<br>';
                 $order->complete();
             }
         } catch (\Exception $e) {
-            echo "Controller: got an exception (" . $e->getMessage() . ")<br>";
+            echo 'Controller: got an exception ('.$e->getMessage().')<br>';
         }
     }
 }

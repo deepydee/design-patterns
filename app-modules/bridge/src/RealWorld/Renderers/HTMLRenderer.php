@@ -33,12 +33,12 @@ final class HTMLRenderer implements Renderer
 
     public function renderHeader(): string
     {
-        return "<html><body>";
+        return '<html><body>';
     }
 
     public function renderFooter(): string
     {
-        return "</body></html>";
+        return '</body></html>';
     }
 
     public function renderParts(array $parts): string

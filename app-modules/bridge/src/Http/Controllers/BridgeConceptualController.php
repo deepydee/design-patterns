@@ -34,7 +34,7 @@ class BridgeConceptualController extends Controller
         $abstraction = new Abstraction($implementation);
         $this->clientCode($abstraction);
 
-        echo "<br>";
+        echo '<br>';
 
         $implementation = new ConcreteImplementationB();
         $abstraction = new ExtendedAbstraction($implementation);

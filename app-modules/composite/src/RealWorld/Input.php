@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Composite\RealWorld;
 
-use Modules\Composite\RealWorld\FormElement;
-
 /**
  * Это компонент-Лист. Как и все Листья, он не может иметь вложенных
  * компонентов.
@@ -27,7 +25,7 @@ final class Input extends FormElement
      */
     public function render(): string
     {
-        return "<label for=\"{$this->name}\">{$this->title}</label>\n" .
+        return "<label for=\"{$this->name}\">{$this->title}</label>\n".
             "<input name=\"{$this->name}\" type=\"{$this->type}\" value=\"{$this->data}\">\n";
     }
 }

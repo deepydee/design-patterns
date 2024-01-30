@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Visitor\RealWorld\Contracts;
 
-use Modules\Visitor\RealWorld\Contracts\Visitor;
-
 /**
  * Интерфейс Компонента объявляет метод принятия объектов-посетителей.
  *

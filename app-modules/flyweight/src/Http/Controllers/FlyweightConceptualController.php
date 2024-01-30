@@ -56,7 +56,7 @@ class FlyweightConceptualController extends Controller
         FlyweightFactory $ff, $plates, $owner,
         $brand, $model, $color
     ) {
-        echo "<br>Client: Adding a car to database.<br>";
+        echo '<br>Client: Adding a car to database.<br>';
         $flyweight = $ff->getFlyweight([$brand, $model, $color]);
 
         // Клиентский код либо сохраняет, либо вычисляет внешнее состояние и

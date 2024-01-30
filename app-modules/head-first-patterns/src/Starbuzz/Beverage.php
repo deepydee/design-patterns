@@ -9,6 +9,7 @@ use Modules\HeadFirstPatterns\Starbuzz\Enums\Size;
 abstract class Beverage
 {
     protected string $description = 'Unknown Beverage';
+
     protected Size $size = Size::TALL;
 
     public function getDescription(): string

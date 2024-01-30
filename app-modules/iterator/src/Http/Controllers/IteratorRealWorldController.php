@@ -9,7 +9,7 @@ class IteratorRealWorldController extends Controller
 {
     public function __invoke()
     {
-        $csv = new CSVIterator(storage_path('app') . '/cats.csv');
+        $csv = new CSVIterator(storage_path('app').'/cats.csv');
 
         // echo '<pre>';
         // foreach ($csv as $key => $row) {

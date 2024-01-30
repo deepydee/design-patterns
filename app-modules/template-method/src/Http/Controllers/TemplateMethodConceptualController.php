@@ -11,11 +11,11 @@ class TemplateMethodConceptualController extends Controller
 {
     public function __invoke()
     {
-        echo "Same client code can work with different subclasses:<br>";
+        echo 'Same client code can work with different subclasses:<br>';
         $this->clientCode(new ConcreteClass1());
-        echo "<br>";
+        echo '<br>';
 
-        echo "Same client code can work with different subclasses:<br>";
+        echo 'Same client code can work with different subclasses:<br>';
         $this->clientCode(new ConcreteClass2());
     }
 

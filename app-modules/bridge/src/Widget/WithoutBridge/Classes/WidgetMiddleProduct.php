@@ -18,7 +18,7 @@ class WidgetMiddleProduct extends WidgetAbstract
     private function getRealizationLogic(Product $product): array
     {
         $id = $product->id;
-        $middleTitle = $product->id . '->' . $product->name;
+        $middleTitle = $product->id.'->'.$product->name;
         $description = $product->description;
 
         return compact('id', 'middleTitle', 'description');
