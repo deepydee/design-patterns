@@ -3,6 +3,8 @@
 namespace Modules\HeadFirstPatterns\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\PizzaStore\ChicagoPizzaStore;
+use Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\PizzaStore\NYPizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\NYStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
@@ -93,8 +95,36 @@ class HeadFirstController extends Controller
         echo 'Joel ordered a '.$pizza->getName().'<br>';
     }
 
-    public function orderPizzaAbstractFactory(): void
-    {
-        // code...
+    public function orderPizzaAbstractFactory(
+        NYPizzaStore $nyPizzaStore,
+        ChicagoPizzaStore $chicagoPizzaStore,
+    ): void {
+        $pizza = $nyPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::CHEESE);
+        echo 'Ethan ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+        $pizza = $chicagoPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::CHEESE);
+        echo 'Joel ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+
+        $pizza = $nyPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::CLAM);
+        echo 'Ethan ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+        $pizza = $chicagoPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::CLAM);
+        echo 'Joel ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+
+        $pizza = $nyPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::PEPPERONI);
+        echo 'Ethan ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+        $pizza = $chicagoPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::PEPPERONI);
+        echo 'Joel ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+
+        $pizza = $nyPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::VEGGIE);
+        echo 'Ethan ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
+        $pizza = $chicagoPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::VEGGIE);
+        echo 'Joel ordered a '.$pizza->getName().'<br>';
+        echo '<br>';
     }
 }
