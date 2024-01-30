@@ -89,17 +89,17 @@
         },
         "hooks": {
             "config": {
-
+                "stop-on-failure": ["pre-commit", "pre-push"]
             },
             "pre-commit": [
                 "echo committing as $(git config user.name)",
-                "php artisan test",
                 "./vendor/bin/pint --dirty",
                 "./vendor/bin/phpstan analyze"
             ],
             "pre-push": [
+                "echo pushing as $(git config user.name)",
                 "php artisan test",
-                "./vendor/bin/pint --dirty",
+                "./vendor/bin/pint -v --dirty",
                 "./vendor/bin/phpstan analyze"
             ]
         }
