@@ -11,6 +11,6 @@ final class CreateProductService
 {
     public function run(ProductDto $dto): User
     {
-        return User::make($dto->toArray());
+        return User::create($dto->toArray());
     }
 }

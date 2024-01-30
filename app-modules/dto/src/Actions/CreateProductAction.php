@@ -12,6 +12,6 @@ final class CreateProductAction
 {
     public function __invoke(ProductDto|Request $dto): User
     {
-        return User::make($dto->toArray());
+        return User::create($dto->toArray());
     }
 }

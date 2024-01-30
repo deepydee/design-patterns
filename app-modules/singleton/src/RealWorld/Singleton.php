@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Singleton\RealWorld;
 
+use Modules\Singleton\RealWorld\SingletonInterface;
+
 /**
  * Если вам необходимо поддерживать в приложении несколько типов Одиночек, вы
  * можете определить основные функции Одиночки в базовом классе, тогда как
  * фактическую бизнес-логику (например, ведение журнала) перенести в подклассы.
+ *
+ * @phpstan-consistent-constructor
  */
-class Singleton
+class Singleton implements SingletonInterface
 {
     /**
      * Реальный экземпляр одиночки почти всегда находится внутри статического

@@ -19,6 +19,6 @@ final class ClamPizza extends Pizza
         $this->dough = $this->ingredientFactory->createDough();
         $this->sauce = $this->ingredientFactory->createSauce();
         $this->cheese = $this->ingredientFactory->createCheese();
-        $this->clams = $this->ingredientFactory->createClams();
+        $this->clam = $this->ingredientFactory->createClams();
     }
 }

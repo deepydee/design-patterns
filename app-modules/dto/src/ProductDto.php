@@ -31,4 +31,13 @@ final readonly class ProductDto
         public int $categoryId,
     ) {
     }
+
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'category_id' => $this->categoryId,
+        ];
+    }
 }
