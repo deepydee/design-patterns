@@ -93,6 +93,7 @@
             },
             "pre-commit": [
                 "echo committing as $(git config user.name)",
+                "php artisan test",
                 "./vendor/bin/pint --dirty",
                 "./vendor/bin/phpstan analyze"
             ],
