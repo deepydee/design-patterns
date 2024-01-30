@@ -97,7 +97,9 @@
                 "./vendor/bin/phpstan analyze"
             ],
             "pre-push": [
-                "php artisan test"
+                "php artisan test",
+                "./vendor/bin/pint --dirty",
+                "./vendor/bin/phpstan analyze"
             ]
         }
     },
