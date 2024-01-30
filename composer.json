@@ -69,12 +69,17 @@
     },
     "scripts": {
         "cghooks": "vendor/bin/cghooks",
+        "check-format": "./vendor/bin/pint -v --test --dirty",
+        "format": "./vendor/bin/pint --dirty",
+        "analyse": "./vendor/bin/phpstan analyze",
+        "post-install-cmd": "cghooks add --ignore-lock",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "cghooks update"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -96,12 +101,14 @@
                 "./vendor/bin/pint --dirty",
                 "./vendor/bin/phpstan analyze"
             ],
+            "commit-msg": "grep -q '[A-Za-z]+-[0-9]+.*' $1",
             "pre-push": [
                 "echo pushing as $(git config user.name)",
                 "php artisan test",
                 "./vendor/bin/pint -v --dirty",
                 "./vendor/bin/phpstan analyze"
-            ]
+            ],
+            "post-merge": "composer install"
         }
     },
     "config": {
