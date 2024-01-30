@@ -45,6 +45,7 @@
         "twig/twig": "^3.8"
     },
     "require-dev": {
+        "brainmaestro/composer-git-hooks": "v3.0.0-alpha.1",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
