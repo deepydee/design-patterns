@@ -101,7 +101,6 @@
                 "./vendor/bin/pint --dirty",
                 "./vendor/bin/phpstan analyze"
             ],
-            "commit-msg": "grep -q '[A-Za-z]+-[0-9]+.*' $1",
             "pre-push": [
                 "echo pushing as $(git config user.name)",
                 "php artisan test",
