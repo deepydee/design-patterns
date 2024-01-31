@@ -31,7 +31,7 @@ class AlphabeticalOrderIterator implements \Iterator
             count($this->collection->getItems()) - 1 : 0;
     }
 
-    public function current()
+    public function current(): mixed
     {
         return $this->collection->getItems()[$this->position];
     }

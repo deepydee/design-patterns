@@ -15,6 +15,8 @@ class IMDBMovieScrapingCommand extends WebScrapingCommand
      */
     public function parse(string $html): void
     {
+        $title = '';
+
         if (preg_match('|<h1 itemprop="name" class="">(.*?)</h1>|', $html, $matches)) {
             $title = $matches[1];
         }

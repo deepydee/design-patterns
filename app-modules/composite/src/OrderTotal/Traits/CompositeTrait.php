@@ -8,6 +8,8 @@ use Modules\Composite\OrderTotal\Contracts\CompositeItem;
 
 trait CompositeTrait
 {
+    private ?float $price = null;
+    protected string $name = '';
     private array $compositeItems = [];
 
     public function setChildItem(CompositeItem $item): void

@@ -11,6 +11,8 @@ use Modules\Composite\OrderTotal\Contracts\CompositeItem;
 class Ingredient extends Model implements CompositeItem
 {
     public string $type = 'Ingredient';
+    public int $price;
+    public string $name;
 
     public function calcPrice(): float
     {
