@@ -206,4 +206,66 @@ class HeadFirstController extends Controller
         $remote->onButtonWasPressed(slot: 4);
         $remote->offButtonWasPressed(slot: 4);
     }
+
+    public function ComplexRemoteControlLambdaas(ComplexRemoteControl $remote): void
+    {
+        $livingRoomLight = new Light('Living Room');
+
+        $remote->setCommand(
+            slot: 0,
+            onCommand: fn () => $livingRoomLight->on(),
+            offCommand: fn () => $livingRoomLight->off(),
+        );
+
+        $kitchenRoomLight = new Light('Kitchen');
+
+        $remote->setCommand(
+            slot: 1,
+            onCommand: fn () => $kitchenRoomLight->on(),
+            offCommand: fn () => $kitchenRoomLight->off(),
+        );
+
+        $ceilingFan = new CeilingFan('Living Room');
+
+        $remote->setCommand(
+            slot: 2,
+            onCommand: fn () => $ceilingFan->high(),
+            offCommand: fn () => $ceilingFan->off(),
+        );
+
+        $garageDoor = new GarageDoor('Garage');
+
+        $remote->setCommand(
+            slot: 3,
+            onCommand: fn () => $garageDoor->up(),
+            offCommand: fn () => $garageDoor->down(),
+        );
+
+        $stereo = new Stereo('Living Room');
+
+        $remote->setCommand(
+            slot: 4,
+            onCommand: function () use ($stereo) {
+                $stereo->on();
+                $stereo->setCD();
+                $stereo->setVolume(volume: 11);
+            },
+            offCommand: fn () => $stereo->off(),
+        );
+
+        $remote->onButtonWasPressed(slot: 0);
+        $remote->offButtonWasPressed(slot: 0);
+
+        $remote->onButtonWasPressed(slot: 1);
+        $remote->offButtonWasPressed(slot: 1);
+
+        $remote->onButtonWasPressed(slot: 2);
+        $remote->offButtonWasPressed(slot: 2);
+
+        $remote->onButtonWasPressed(slot: 3);
+        $remote->offButtonWasPressed(slot: 3);
+
+        $remote->onButtonWasPressed(slot: 4);
+        $remote->offButtonWasPressed(slot: 4);
+    }
 }

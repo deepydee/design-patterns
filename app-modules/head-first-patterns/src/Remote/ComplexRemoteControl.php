@@ -10,10 +10,10 @@ use Modules\HeadFirstPatterns\Remote\Contracts\Command;
 
 class ComplexRemoteControl
 {
-    /** @var Collection<int, Command> */
+    /** @var Collection<int, Command|callable> */
     private Collection $onCommands;
 
-    /** @var Collection<int, Command> */
+    /** @var Collection<int, Command|callable> */
     private Collection $offCommands;
 
     public function __construct()
@@ -22,7 +22,7 @@ class ComplexRemoteControl
         $this->offCommands = Collection::times(7, fn () => new NoCommand());
     }
 
-    public function setCommand(int $slot, Command $onCommand, Command $offCommand): void
+    public function setCommand(int $slot, Command|callable $onCommand, Command|callable $offCommand): void
     {
         $this->onCommands->put($slot, $onCommand);
         $this->offCommands->put($slot, $offCommand);
@@ -30,16 +30,28 @@ class ComplexRemoteControl
 
     public function onButtonWasPressed(int $slot): void
     {
-        $this->onCommands
-            ->get($slot)
-            ->execute();
+        $onCommand = $this->onCommands->get($slot);
+
+        if (is_callable($onCommand)) {
+            $onCommand();
+
+            return;
+        }
+
+        $onCommand->execute();
     }
 
     public function offButtonWasPressed(int $slot): void
     {
-        $this->offCommands
-            ->get($slot)
-            ->execute();
+        $offCommand = $this->offCommands->get($slot);
+
+        if (is_callable($offCommand)) {
+            $offCommand();
+
+            return;
+        }
+
+        $offCommand->execute();
     }
 
     public function __toString(): string
