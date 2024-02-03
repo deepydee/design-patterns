@@ -197,14 +197,20 @@ class HeadFirstController extends Controller
 
         $remote->onButtonWasPressed(slot: 0);
         $remote->offButtonWasPressed(slot: 0);
+        $remote->undoButtonWasPressed();
+
         $remote->onButtonWasPressed(slot: 1);
         $remote->offButtonWasPressed(slot: 1);
+
         $remote->onButtonWasPressed(slot: 2);
         $remote->offButtonWasPressed(slot: 2);
+
         $remote->onButtonWasPressed(slot: 3);
         $remote->offButtonWasPressed(slot: 3);
+
         $remote->onButtonWasPressed(slot: 4);
         $remote->offButtonWasPressed(slot: 4);
+        $remote->undoButtonWasPressed();
     }
 
     public function ComplexRemoteControlLambdaas(ComplexRemoteControl $remote): void
@@ -267,5 +273,6 @@ class HeadFirstController extends Controller
 
         $remote->onButtonWasPressed(slot: 4);
         $remote->offButtonWasPressed(slot: 4);
+        $remote->undoButtonWasPressed();
     }
 }

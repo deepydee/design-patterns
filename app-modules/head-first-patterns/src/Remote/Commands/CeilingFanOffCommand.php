@@ -17,4 +17,9 @@ class CeilingFanOffCommand implements Command
     {
         $this->ceilingFan->off();
     }
+
+    public function undo(): void
+    {
+        $this->ceilingFan->high();
+    }
 }

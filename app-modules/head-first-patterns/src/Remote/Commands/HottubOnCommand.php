@@ -19,4 +19,11 @@ class HottubOnCommand implements Command
         $this->hottub->heat();
         $this->hottub->bubblesOn();
     }
+
+    public function undo(): void
+    {
+        $this->hottub->off();
+        $this->hottub->cool();
+        $this->hottub->bubblesOff();
+    }
 }

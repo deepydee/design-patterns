@@ -17,4 +17,9 @@ class GarageDoorDownCommand implements Command
     {
         $this->garageDoor->down();
     }
+
+    public function undo(): void
+    {
+        $this->garageDoor->up();
+    }
 }

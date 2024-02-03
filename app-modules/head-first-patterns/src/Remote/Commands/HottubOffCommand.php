@@ -18,4 +18,10 @@ class HottubOffCommand implements Command
         $this->hottub->cool();
         $this->hottub->off();
     }
+
+    public function undo(): void
+    {
+        $this->hottub->on();
+        $this->hottub->setTemperature(104);
+    }
 }
