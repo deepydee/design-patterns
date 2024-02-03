@@ -9,10 +9,20 @@ use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoSty
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\NYStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\PizzaStore;
+use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanOffCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanOnCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorDownCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorOpenCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorUpCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\LightOffCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\LightOnCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\StereoOffCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\StereoOnWithCDCommand;
+use Modules\HeadFirstPatterns\Remote\ComplexRemoteControl;
+use Modules\HeadFirstPatterns\Remote\Objects\CeilingFan;
 use Modules\HeadFirstPatterns\Remote\Objects\GarageDoor;
 use Modules\HeadFirstPatterns\Remote\Objects\Light;
+use Modules\HeadFirstPatterns\Remote\Objects\Stereo;
 use Modules\HeadFirstPatterns\Remote\SimpleRemoteControl;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
 use Modules\HeadFirstPatterns\SimUDuck\MallardDuck;
@@ -146,5 +156,54 @@ class HeadFirstController extends Controller
 
         $remote->setCommand($garageOpen);
         $remote->buttonWasPressed();
+    }
+
+    public function ComplexRemoteControl(ComplexRemoteControl $remote): void
+    {
+        $livingRoomLight = new Light('Living Room');
+        $kitchenRoomLight = new Light('Kitchen');
+
+        $ceilingFan = new CeilingFan('Living Room');
+
+        $garageDoor = new GarageDoor('Garage');
+
+        $stereo = new Stereo('Living Room');
+
+        $livingRoomLightOn = new LightOnCommand($livingRoomLight);
+        $livingRoomLightOff = new LightOffCommand($livingRoomLight);
+
+        $kitchenLightOn = new LightOnCommand($kitchenRoomLight);
+        $kitchenLightOff = new LightOffCommand($kitchenRoomLight);
+
+        $ceilingFanOn = new CeilingFanOnCommand($ceilingFan);
+        $ceilingFanOff = new CeilingFanOffCommand($ceilingFan);
+
+        $garageDoorUp = new GarageDoorUpCommand($garageDoor);
+        $garageDoorDown = new GarageDoorDownCommand($garageDoor);
+
+        $stereoOnWithCD = new StereoOnWithCDCommand($stereo);
+        $stereoOff = new StereoOffCommand($stereo);
+
+        $remote->setCommand(slot: 0, onCommand: $livingRoomLightOn, offCommand: $livingRoomLightOff);
+        $remote->setCommand(slot: 1, onCommand: $kitchenLightOn, offCommand: $kitchenLightOff);
+        $remote->setCommand(slot: 2, onCommand: $ceilingFanOn, offCommand: $ceilingFanOff);
+        $remote->setCommand(slot: 3, onCommand: $stereoOnWithCD, offCommand: $stereoOff);
+        $remote->setCommand(slot: 4, onCommand: $garageDoorUp, offCommand: $garageDoorDown);
+
+        echo $remote;
+
+        echo '<br>';
+        echo '<br>';
+
+        $remote->onButtonWasPressed(slot: 0);
+        $remote->offButtonWasPressed(slot: 0);
+        $remote->onButtonWasPressed(slot: 1);
+        $remote->offButtonWasPressed(slot: 1);
+        $remote->onButtonWasPressed(slot: 2);
+        $remote->offButtonWasPressed(slot: 2);
+        $remote->onButtonWasPressed(slot: 3);
+        $remote->offButtonWasPressed(slot: 3);
+        $remote->onButtonWasPressed(slot: 4);
+        $remote->offButtonWasPressed(slot: 4);
     }
 }
