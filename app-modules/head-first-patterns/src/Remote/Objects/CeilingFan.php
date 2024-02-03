@@ -8,7 +8,7 @@ use Modules\HeadFirstPatterns\Remote\Enums\FanLevel;
 
 class CeilingFan
 {
-    private FanLevel $level;
+    private FanLevel $speed = FanLevel::OFF;
 
     public function __construct(private string $location)
     {
@@ -16,30 +16,30 @@ class CeilingFan
 
     public function high(): void
     {
-        $this->level = FanLevel::HIGH;
+        $this->speed = FanLevel::HIGH;
         echo "Ceiling fan is on high and at {$this->location}<br>";
     }
 
     public function medium(): void
     {
-        $this->level = FanLevel::MEDIUM;
+        $this->speed = FanLevel::MEDIUM;
         echo "Ceiling fan is on medium and at {$this->location}<br>";
     }
 
     public function low(): void
     {
-        $this->level = FanLevel::LOW;
+        $this->speed = FanLevel::LOW;
         echo "Ceiling fan is on low and at {$this->location}<br>";
     }
 
     public function off(): void
     {
-        $this->level = FanLevel::LOW;
+        $this->speed = FanLevel::OFF;
         echo "Ceiling fan is off and at {$this->location}<br>";
     }
 
     public function getSpeed(): FanLevel
     {
-        return $this->level;
+        return $this->speed;
     }
 }

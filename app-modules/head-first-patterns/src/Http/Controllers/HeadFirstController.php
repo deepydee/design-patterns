@@ -9,8 +9,9 @@ use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoSty
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\NYStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\PizzaStore;
+use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanHighCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanMediumCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanOffCommand;
-use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanOnCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorDownCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorOpenCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorUpCommand;
@@ -175,7 +176,8 @@ class HeadFirstController extends Controller
         $kitchenLightOn = new LightOnCommand($kitchenRoomLight);
         $kitchenLightOff = new LightOffCommand($kitchenRoomLight);
 
-        $ceilingFanOn = new CeilingFanOnCommand($ceilingFan);
+        $ceilingFanHigh = new CeilingFanHighCommand($ceilingFan);
+        $ceilingFanMedium = new CeilingFanMediumCommand($ceilingFan);
         $ceilingFanOff = new CeilingFanOffCommand($ceilingFan);
 
         $garageDoorUp = new GarageDoorUpCommand($garageDoor);
@@ -186,9 +188,12 @@ class HeadFirstController extends Controller
 
         $remote->setCommand(slot: 0, onCommand: $livingRoomLightOn, offCommand: $livingRoomLightOff);
         $remote->setCommand(slot: 1, onCommand: $kitchenLightOn, offCommand: $kitchenLightOff);
-        $remote->setCommand(slot: 2, onCommand: $ceilingFanOn, offCommand: $ceilingFanOff);
-        $remote->setCommand(slot: 3, onCommand: $stereoOnWithCD, offCommand: $stereoOff);
-        $remote->setCommand(slot: 4, onCommand: $garageDoorUp, offCommand: $garageDoorDown);
+
+        $remote->setCommand(slot: 2, onCommand: $ceilingFanHigh, offCommand: $ceilingFanOff);
+        $remote->setCommand(slot: 3, onCommand: $ceilingFanMedium, offCommand: $ceilingFanOff);
+
+        $remote->setCommand(slot: 4, onCommand: $stereoOnWithCD, offCommand: $stereoOff);
+        $remote->setCommand(slot: 5, onCommand: $garageDoorUp, offCommand: $garageDoorDown);
 
         echo $remote;
 
@@ -204,12 +209,16 @@ class HeadFirstController extends Controller
 
         $remote->onButtonWasPressed(slot: 2);
         $remote->offButtonWasPressed(slot: 2);
+        $remote->undoButtonWasPressed();
 
         $remote->onButtonWasPressed(slot: 3);
-        $remote->offButtonWasPressed(slot: 3);
+        $remote->undoButtonWasPressed();
 
         $remote->onButtonWasPressed(slot: 4);
         $remote->offButtonWasPressed(slot: 4);
+
+        $remote->onButtonWasPressed(slot: 5);
+        $remote->offButtonWasPressed(slot: 5);
         $remote->undoButtonWasPressed();
     }
 

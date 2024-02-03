@@ -9,4 +9,5 @@ enum FanLevel
     case LOW;
     case MEDIUM;
     case HIGH;
+    case OFF;
 }

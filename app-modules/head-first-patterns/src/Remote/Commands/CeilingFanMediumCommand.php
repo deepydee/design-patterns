@@ -9,7 +9,7 @@ use Modules\HeadFirstPatterns\Remote\Enums\FanLevel;
 use Modules\HeadFirstPatterns\Remote\Objects\CeilingFan;
 use Modules\HeadFirstPatterns\Remote\Traits\CeilingFanTrait;
 
-class CeilingFanOffCommand implements Command
+class CeilingFanMediumCommand implements Command
 {
     use CeilingFanTrait;
 
@@ -22,6 +22,6 @@ class CeilingFanOffCommand implements Command
     public function execute(): void
     {
         $this->prevSpeed = $this->ceilingFan->getSpeed();
-        $this->ceilingFan->off();
+        $this->ceilingFan->medium();
     }
 }
