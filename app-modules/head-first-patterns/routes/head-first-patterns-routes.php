@@ -8,3 +8,4 @@ Route::get('/head-first-patterns/starbuzz', [HeadFirstController::class, 'starBu
 Route::get('/head-first-patterns/order-pizza/simple', [HeadFirstController::class, 'orderPizzaSimple']);
 Route::get('/head-first-patterns/order-pizza/factory-method', [HeadFirstController::class, 'orderPizzaFactoryMethod']);
 Route::get('/head-first-patterns/order-pizza/abstract-factory', [HeadFirstController::class, 'orderPizzaAbstractFactory']);
+Route::get('/head-first-patterns/remote/simple-remote', [HeadFirstController::class, 'SimpleRemoteControl']);

@@ -9,6 +9,11 @@ use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoSty
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\NYStylePizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\Enums\PizzaType;
 use Modules\HeadFirstPatterns\PizzaStore\SimpleFactory\PizzaStore;
+use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorOpenCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\LightOnCommand;
+use Modules\HeadFirstPatterns\Remote\Objects\GarageDoor;
+use Modules\HeadFirstPatterns\Remote\Objects\Light;
+use Modules\HeadFirstPatterns\Remote\SimpleRemoteControl;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
 use Modules\HeadFirstPatterns\SimUDuck\MallardDuck;
 use Modules\HeadFirstPatterns\SimUDuck\ModelDuck;
@@ -126,5 +131,20 @@ class HeadFirstController extends Controller
         $pizza = $chicagoPizzaStore->orderPizza(\Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\Enums\PizzaType::VEGGIE);
         echo 'Joel ordered a '.$pizza->getName().'<br>';
         echo '<br>';
+    }
+
+    public function SimpleRemoteControl(SimpleRemoteControl $remote): void
+    {
+        $light = new Light('Living Room');
+        $garageDoor = new GarageDoor('Garage');
+
+        $lightOn = new LightOnCommand($light);
+        $garageOpen = new GarageDoorOpenCommand($garageDoor);
+
+        $remote->setCommand($lightOn);
+        $remote->buttonWasPressed();
+
+        $remote->setCommand($garageOpen);
+        $remote->buttonWasPressed();
     }
 }
