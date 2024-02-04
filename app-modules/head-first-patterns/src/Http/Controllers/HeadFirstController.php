@@ -15,15 +15,22 @@ use Modules\HeadFirstPatterns\Remote\Commands\CeilingFanOffCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorDownCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorOpenCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\GarageDoorUpCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\HottubOffCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\HottubOnCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\LightOffCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\LightOnCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\MacroCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\StereoOffCommand;
 use Modules\HeadFirstPatterns\Remote\Commands\StereoOnWithCDCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\TVOffCommand;
+use Modules\HeadFirstPatterns\Remote\Commands\TVOnCommand;
 use Modules\HeadFirstPatterns\Remote\ComplexRemoteControl;
 use Modules\HeadFirstPatterns\Remote\Objects\CeilingFan;
 use Modules\HeadFirstPatterns\Remote\Objects\GarageDoor;
+use Modules\HeadFirstPatterns\Remote\Objects\Hottub;
 use Modules\HeadFirstPatterns\Remote\Objects\Light;
 use Modules\HeadFirstPatterns\Remote\Objects\Stereo;
+use Modules\HeadFirstPatterns\Remote\Objects\TV;
 use Modules\HeadFirstPatterns\Remote\SimpleRemoteControl;
 use Modules\HeadFirstPatterns\SimUDuck\FlyBehavior\FlyRocketPowered;
 use Modules\HeadFirstPatterns\SimUDuck\MallardDuck;
@@ -282,6 +289,41 @@ class HeadFirstController extends Controller
 
         $remote->onButtonWasPressed(slot: 4);
         $remote->offButtonWasPressed(slot: 4);
+        $remote->undoButtonWasPressed();
+    }
+
+    public function macro(ComplexRemoteControl $remote): void
+    {
+        $light = new Light('Living Room');
+        $tv = new TV('Living Room');
+        $stereo = new Stereo('Living Room');
+        $hothub = new Hottub();
+
+        $lightOn = new LightOnCommand($light);
+        $stereoOn = new StereoOnWithCDCommand($stereo);
+        $tvOn = new TVOnCommand($tv);
+        $hothubOn = new HottubOnCommand($hothub);
+
+        $lightOff = new LightOffCommand($light);
+        $stereoOff = new StereoOffCommand($stereo);
+        $tvOff = new TVOffCommand($tv);
+        $hothubOff = new HottubOffCommand($hothub);
+
+        $partyOn = collect([$lightOn, $stereoOn, $tvOn, $hothubOn]);
+        $partyOff = collect([$lightOff, $stereoOff, $tvOff, $hothubOff]);
+
+        $partyOnMacro = new MacroCommand($partyOn);
+        $partyOffMacro = new MacroCommand($partyOff);
+
+        $remote->setCommand(slot: 0, onCommand: $partyOnMacro, offCommand: $partyOffMacro);
+
+        echo $remote;
+        echo '<br>';
+        echo 'Pushing Macro On ---<br>';
+        $remote->onButtonWasPressed(slot: 0);
+        echo 'Pushing Macro Off ---<br>';
+        $remote->offButtonWasPressed(slot: 0);
+        echo 'Undo ---<br>';
         $remote->undoButtonWasPressed();
     }
 }

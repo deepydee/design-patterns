@@ -11,3 +11,4 @@ Route::get('/head-first-patterns/order-pizza/abstract-factory', [HeadFirstContro
 Route::get('/head-first-patterns/remote/simple-remote', [HeadFirstController::class, 'SimpleRemoteControl']);
 Route::get('/head-first-patterns/remote/complex-remote', [HeadFirstController::class, 'ComplexRemoteControl']);
 Route::get('/head-first-patterns/remote/complex-remote-lambdas', [HeadFirstController::class, 'ComplexRemoteControlLambdaas']);
+Route::get('/head-first-patterns/remote/macro', [HeadFirstController::class, 'macro']);
