@@ -11,7 +11,10 @@
 			"Modules\\ZandstraPatterns\\Tests\\": "tests/",
 			"Modules\\ZandstraPatterns\\Database\\Factories\\": "database/factories/",
 			"Modules\\ZandstraPatterns\\Database\\Seeders\\": "database/seeders/"
-		}
+		},
+        "files": [
+            "src/Facade/ThirdPartyCode.php"
+        ]
 	},
 	"minimum-stability": "stable",
 	"extra": {

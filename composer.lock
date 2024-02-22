@@ -3564,7 +3564,7 @@
             "dist": {
                 "type": "path",
                 "url": "app-modules/zandstra-patterns",
-                "reference": "57da650060a52bb67de00caa165d367f6e17f2b6"
+                "reference": "899109714fb0e7b80756532aac970525bc2fe41a"
             },
             "type": "library",
             "extra": {
@@ -3580,7 +3580,10 @@
                     "Modules\\ZandstraPatterns\\Tests\\": "tests/",
                     "Modules\\ZandstraPatterns\\Database\\Factories\\": "database/factories/",
                     "Modules\\ZandstraPatterns\\Database\\Seeders\\": "database/seeders/"
-                }
+                },
+                "files": [
+                    "src/Facade/ThirdPartyCode.php"
+                ]
             },
             "license": [
                 "proprietary"
