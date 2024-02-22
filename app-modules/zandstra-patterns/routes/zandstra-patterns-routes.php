@@ -1,5 +1,6 @@
 <?php
 
+use Modules\ZandstraPatterns\Http\Controllers\CompositeController;
 use Modules\ZandstraPatterns\Http\Controllers\DecoratorController;
 use Modules\ZandstraPatterns\Http\Controllers\FacadeController;
 
@@ -8,3 +9,4 @@ Route::get('/zandstra-patterns/tile-decorator', [DecoratorController::class, 'ti
 Route::get('/zandstra-patterns/request-decorator', [DecoratorController::class, 'request']);
 Route::get('/zandstra-patterns/facade/procedural', [FacadeController::class, 'procedural']);
 Route::get('/zandstra-patterns/facade/facade', [FacadeController::class, 'facade']);
+Route::get('/zandstra-patterns/composite', [CompositeController::class, 'composite']);
