@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02ac4dc492ece1e0d1994b641609189c",
+    "content-hash": "8cca256be3ce2b8608f76cc88d4da8f8",
     "packages": [
         {
             "name": "brick/math",
@@ -3548,6 +3548,38 @@
                     "Modules\\Visitor\\Tests\\": "tests/",
                     "Modules\\Visitor\\Database\\Factories\\": "database/factories/",
                     "Modules\\Visitor\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/zandstra-patterns",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/zandstra-patterns",
+                "reference": "57da650060a52bb67de00caa165d367f6e17f2b6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\ZandstraPatterns\\Providers\\ZandstraPatternsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\ZandstraPatterns\\": "src/",
+                    "Modules\\ZandstraPatterns\\Tests\\": "tests/",
+                    "Modules\\ZandstraPatterns\\Database\\Factories\\": "database/factories/",
+                    "Modules\\ZandstraPatterns\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [

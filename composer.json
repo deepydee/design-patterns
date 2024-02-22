@@ -42,6 +42,7 @@
         "modules/strategy": "*",
         "modules/template-method": "*",
         "modules/visitor": "*",
+        "modules/zandstra-patterns": "*",
         "twig/twig": "^3.8"
     },
     "require-dev": {
@@ -79,8 +80,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "cghooks update"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -95,7 +95,10 @@
         },
         "hooks": {
             "config": {
-                "stop-on-failure": ["pre-commit", "pre-push"]
+                "stop-on-failure": [
+                    "pre-commit",
+                    "pre-push"
+                ]
             },
             "pre-commit": [
                 "./vendor/bin/pint --dirty",
