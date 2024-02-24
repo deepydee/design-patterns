@@ -12,14 +12,18 @@ class CompositeController extends Controller
 {
     public function composite(): void
     {
-        $archer = new Archer();
-        $laserCannonUnit = new LaserCannonUnit();
-        $army = new Army();
+        $main_army = new Army() ;
 
-        $army
-            ->addUnit($archer)
-            ->addUnit($laserCannonUnit);
+        $main_army->addUnit(new Archer());
+        $main_army->addUnit(new LaserCannonUnit());
 
-        dump($army->bombardStrength());
+        $sub_army = new Army();
+        $sub_army->addUnit(new Archer());
+        $sub_army->addUnit(new Archer());
+        $sub_army->addUnit(new Archer());
+
+        $main_army->addUnit($sub_army);
+
+        dump($main_army->bombardStrength());
     }
 }
