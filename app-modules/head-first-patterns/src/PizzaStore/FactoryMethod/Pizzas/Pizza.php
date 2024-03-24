@@ -12,6 +12,7 @@ abstract class Pizza
 
     protected string $sauce = 'Abstract Sauce';
 
+    /** @var array<string> */
     protected array $toppings = [];
 
     public function prepare(): void
