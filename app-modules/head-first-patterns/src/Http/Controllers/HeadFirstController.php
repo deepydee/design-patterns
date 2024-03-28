@@ -3,6 +3,8 @@
 namespace Modules\HeadFirstPatterns\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Modules\HeadFirstPatterns\AdapterDuck\Contracts\Duck;
+use Modules\HeadFirstPatterns\AdapterDuck\TurkeyAdapter;
 use Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\PizzaStore\ChicagoPizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\AbstractFactory\PizzaStore\NYPizzaStore;
 use Modules\HeadFirstPatterns\PizzaStore\FactoryMethod\PizzaFactories\ChicagoStylePizzaStore;
@@ -325,5 +327,31 @@ class HeadFirstController extends Controller
         $remote->offButtonWasPressed(slot: 0);
         echo 'Undo ---<br>';
         $remote->undoButtonWasPressed();
+    }
+
+    public function adapterDuck(): void
+    {
+        $duck = new \Modules\HeadFirstPatterns\AdapterDuck\MallardDuck();
+        $turkey = new \Modules\HeadFirstPatterns\AdapterDuck\WildTurkey();
+        $adapter = new TurkeyAdapter(turkey: $turkey);
+
+        $testDuck = function (Duck $duck) {
+            $duck->quack();
+            $duck->fly();
+        };
+
+        echo 'The Turkey says...';
+        $turkey->gobble();
+        $turkey->fly();
+
+        echo '<br>';
+
+        echo 'The Duck says...';
+        $testDuck($duck);
+
+        echo '<br>';
+
+        echo 'The TurkeyAdapter says...';
+        $testDuck($adapter);
     }
 }
